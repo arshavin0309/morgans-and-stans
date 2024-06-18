@@ -340,7 +340,6 @@ h3,
 
 .platform__window {
     width: 100%;
-    padding: 0 30px;
 }
 
 .platform__header {
@@ -695,7 +694,7 @@ h3,
 }
 
 .choice__content {
-    max-width: 550px;
+    max-width: 540px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -832,8 +831,6 @@ footer .container {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    padding-left: 90px;
-    padding-right: 90px;
     padding-top: 205px;
     padding-bottom: 70px;
 }
@@ -2351,4 +2348,37 @@ p.condition {
 
 .cryptocurrencies-main .what-is-trading__box p {
     max-width: initial;
+}
+
+.choice__item:nth-child(5) {
+    justify-content: end;
+}
+
+.choice__item:nth-child(4) .choice__number::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: url(../img/invest.svg) center / contain no-repeat;
+}
+
+.choice__item:nth-child(5) .choice__number::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: url(../img/trading.svg) center / contain no-repeat;
+}
+
+.choice__item:nth-child(6) .choice__number::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: url(../img/invest.svg) center / contain no-repeat;
+}
+
+.cryptocurrencies-main .choice__item:nth-child(2) .choice__content,
+.cryptocurrencies-main .choice__item:nth-child(5) .choice__content {
+    max-width: 360px;
 }
