@@ -1,0 +1,19 @@
+<svg width="178" height="178" viewBox="0 0 178 178" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="path-1-inside-1_6170_349" fill="white">
+<path d="M178 89C178 138.153 138.153 178 89 178C39.8467 178 0 138.153 0 89C0 39.8467 39.8467 0 89 0C138.153 0 178 39.8467 178 89ZM31.15 89C31.15 120.95 57.0503 146.85 89 146.85C120.95 146.85 146.85 120.95 146.85 89C146.85 57.0503 120.95 31.15 89 31.15C57.0503 31.15 31.15 57.0503 31.15 89Z"/>
+</mask>
+<path d="M178 89C178 138.153 138.153 178 89 178C39.8467 178 0 138.153 0 89C0 39.8467 39.8467 0 89 0C138.153 0 178 39.8467 178 89ZM31.15 89C31.15 120.95 57.0503 146.85 89 146.85C120.95 146.85 146.85 120.95 146.85 89C146.85 57.0503 120.95 31.15 89 31.15C57.0503 31.15 31.15 57.0503 31.15 89Z" fill="url(#paint0_angular_6170_349)" stroke="url(#paint1_linear_6170_349)" stroke-opacity="0.6" stroke-width="2" mask="url(#path-1-inside-1_6170_349)"/>
+<defs>
+<radialGradient id="paint0_angular_6170_349" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(89 89) rotate(90) scale(89)">
+<stop offset="0.18" stop-color="#FFF8E0"/>
+<stop offset="0.265" stop-color="#FFF5CA"/>
+<stop offset="0.445" stop-color="#FFEF9C"/>
+<stop offset="0.69" stop-color="#DE8737"/>
+<stop offset="1" stop-color="#FFCF25"/>
+</radialGradient>
+<linearGradient id="paint1_linear_6170_349" x1="162" y1="30.5" x2="-4" y2="97" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DE8737"/>
+<stop offset="0.758532" stop-color="#FFCF25"/>
+</linearGradient>
+</defs>
+</svg>
