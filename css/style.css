@@ -1,3 +1,9 @@
+/*
+Theme Name: Morgans and Stans
+Author: UTIP sites team
+Version: 1.0
+*/
+
 :root {
     --black: #000;
     --white: #fff;
@@ -39,6 +45,10 @@ body {
     padding-right: 60px;
 }
 
+section {
+    width: 100%;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -77,6 +87,10 @@ main {
     position: relative;
 }
 
+.header__nav .text2 {
+    cursor: pointer;
+}
+
 .hover-menu {
     display: none;
     z-index: 1;
@@ -107,6 +121,14 @@ main {
 a {
     color: var(--text);
     transition: .2s ease-in-out all;
+}
+
+button {
+    transition: .2s ease-in-out all;
+}
+
+button:hover {
+    color: var(--mid-gold);
 }
 
 a:hover {
@@ -347,7 +369,7 @@ h3,
     align-items: center;
     justify-content: space-between;
     padding: 18px 24px;
-    border: 1px solid #3D2C2C4D;
+    border: 1px solid #FFFFFF3A;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     background: #3D2C2C4D;
@@ -421,7 +443,7 @@ h3,
 
 .platform__box {
     padding: 19px 21px;
-    border: 1px solid #3D2C2C4D;
+    border: 1px solid #FFFFFF3A;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     background: #3D2C2C4D;
@@ -896,21 +918,8 @@ footer .container {
 }
 
 .mchw-widget-footer .mchw-link {
-    font-size: 10px !important;
     font-family: 'Unbounded', sans-serif !important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 .error {
     margin-top: 100px;
@@ -1009,6 +1018,7 @@ footer .container {
 }
 
 .trader__box {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -1054,7 +1064,6 @@ footer .container {
 }
 
 .trader__item--desktop .trader__img::before {
-    z-index: -1;
     content: '';
     position: absolute;
     width: 100%;
@@ -1136,7 +1145,7 @@ footer .container {
     height: 35px;
     content: '';
     display: block;
-    background: url(../img/play-market.svg) center / contain no-repeat;
+    background: url(../img/play-market.png) center / contain no-repeat;
 }
 
 .conditions .container::before {
@@ -1510,7 +1519,8 @@ footer .container {
     margin-bottom: 65px;
 }
 
-.error::before {
+.error .container::before {
+    z-index: -1;
     position: absolute;
     content: '';
     width: 150%;
@@ -1518,7 +1528,7 @@ footer .container {
     top: -30%;
     right: -50%;
     background: url(../img/404-gradient.svg) center / 100% no-repeat;
-    filter: blur(50px);
+    filter: blur(100px);
 }
 
 .our-contacs__box {
@@ -1564,7 +1574,9 @@ footer .container {
 }
 
 .our-contacs__also {
+    max-width: 530px;
     color: #7D7D7D;
+    font-family: 'Rubik', sans-serif;
 }
 
 input {
@@ -1673,11 +1685,14 @@ form .btn {
     border-radius: 25px;
     border: 1px solid #FFFFFF3A;
     background: #FFFFFF1A;
+    backdrop-filter: blur(7px);
+    font-family: 'Rubik', sans-serif;
 }
 
 .types__item:nth-child(2) {
     position: relative;
     grid-row: 2/3;
+    background: #DE87374D;
 }
 
 .types__item:nth-child(2)::before {
@@ -1685,7 +1700,7 @@ form .btn {
     content: 'популярный';
     top: -12px;
     right: 22px;
-    color: #000000B2;
+    color: var(--black);
     padding: 2px 25px;
     font-size: 16px;
     line-height: 125%;
@@ -1697,6 +1712,10 @@ form .btn {
 
 .types__item:nth-child(3) {
     grid-row: 1/3;
+}
+
+.types__item:nth-child(3) li {
+    color: var(--white);
 }
 
 .types__item h3 {
@@ -1711,7 +1730,9 @@ form .btn {
 
 .types__item li {
     color: var(--grey-text);
-    line-height: 28px;
+    font-size: clamp(16px, 3vw, 22px);
+    line-height: 130%;
+    font-weight: 300;
 }
 
 .types .btn {
@@ -1744,10 +1765,10 @@ form .btn {
     z-index: -1;
     position: absolute;
     bottom: -39%;
-    left: -27%;
-    width: 120%;
+    left: -8%;
+    width: 100%;
     height: 180%;
-    background: url(../img/types-gradient.svg) center / 100% no-repeat;
+    background: url(../img/types-gradient.svg) center / cover no-repeat;
     filter: blur(200px);
 }
 
@@ -1805,7 +1826,7 @@ form .btn {
 .assets__header {
     display: grid;
     align-items: center;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     text-align: center;
     gap: 1px;
     margin-top: 15px;
@@ -1815,7 +1836,7 @@ form .btn {
 .assets__table {
     width: calc(100% - 30px);
     margin: 0 15px 18px;
-    border-collapse:separate;
+    border-collapse: separate;
     border-spacing: 0 4px;
 }
 
@@ -1823,6 +1844,14 @@ form .btn {
     background: var(--black);
     color: var(--white);
     text-align: left;
+}
+
+.assets__table tr:nth-child(n+9) {
+    display: none;
+}
+
+.assets__table.table-active.show tr:nth-child(n+9) {
+    display: table-row;
 }
 
 .assets__table tr:not(:last-child) {
@@ -1845,8 +1874,13 @@ form .btn {
     font-weight: 300;
 }
 
-.assets__info {
+.assets__info,
+.assets__table td span:nth-child(2) {
     color: #727272;
+}
+
+.assets__table td span {
+    display: block;
 }
 
 .assets__name:nth-child(1)::before {
@@ -1908,6 +1942,10 @@ form .btn {
     line-height: 130%;
     font-weight: 300;
     color: var(--black);
+    margin: auto;
+    border: none;
+    background: none;
+    cursor: pointer;
 }
 
 .assets__btn::after {
@@ -1915,6 +1953,10 @@ form .btn {
     width: 20px;
     height: 20px;
     background: url(../img/arrow-bottom.svg) center / contain no-repeat;
+}
+
+.assets__btn.show::after {
+    transform: rotate(180deg);
 }
 
 .assets__body {
@@ -2081,6 +2123,7 @@ h1.text2 {
 }
 
 .what-is-trading__box p {
+    color: var(--grey-text);
     text-align: left;
 }
 
@@ -2381,4 +2424,125 @@ p.condition {
 .cryptocurrencies-main .choice__item:nth-child(2) .choice__content,
 .cryptocurrencies-main .choice__item:nth-child(5) .choice__content {
     max-width: 360px;
+}
+
+.cryptocurrencies-main .choice h2 {
+    margin-left: 0;
+    margin-bottom: 40px;
+}
+
+.cryptocurrencies-main .choice p {
+    max-width: 690px;
+    margin-right: auto;
+    text-align: left;
+}
+
+.cryptocurrencies-main .choice__box {
+    padding: 0;
+    margin-top: 30px;
+}
+
+.online {
+    padding-top: 60px;
+}
+
+.cryptocurrencies-main .online h2 {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.cryptocurrencies-main .online p {
+    max-width: 730px;
+    margin: auto;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.cryptocurrencies-main .analitics__banner {
+    margin-top: 0;
+}
+
+.cryptocurrencies .container::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: -83%;
+    left: -18%;
+    width: 150%;
+    height: 350%;
+    background: url(../img/web-trader-gradient-1.svg) top center / cover no-repeat;
+    filter: blur(30px);
+}
+
+.cryptocurrencies-main .what-is-trading .container::before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: auto;
+    left: auto;
+    bottom: -56%;
+    right: -52%;
+    width: 200%;
+    height: 200%;
+    background: url(../img/what-is-it-gradient.svg) center / cover no-repeat;
+    filter: blur(30px);
+}
+
+.cryptocurrencies-main .choice__box::before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: -3%;
+    left: -58%;
+    width: 200%;
+    height: 100%;
+    background: url(../img/choice-gradient.svg) center / cover no-repeat;
+}
+
+details[open] {
+    animation: slide .3s ease-in-out;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translate(0, -10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+.news-main .analitics__left {
+    max-width: 570px;
+}
+
+.news-main .analitics__left p {
+    max-width: 315px;
+}
+
+.assets__table.tab-2 {
+    display: none;
+}
+
+.assets__table.tab-3 {
+    display: none;
+}
+
+.assets__table.tab-4 {
+    display: none;
+}
+
+.assets__table.tab-5 {
+    display: none;
+}
+
+.assets__table.tab-6 {
+    display: none;
+}
+
+.burger {
+    display: none;
 }
