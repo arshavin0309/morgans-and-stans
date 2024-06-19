@@ -77,8 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // табы
-
+    // табы и кнопка "показать еще"
     let btn = document.querySelector('.assets__btn')
 
     document.querySelector('#tab-1').addEventListener('click', () => {
@@ -92,6 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector('.tab-1').style = 'display: table'
         document.querySelector('.tab-1').classList.add('table-active')
         btn.textContent = 'Показать еще'
+        btn.classList.remove('show')
     })
 
     document.querySelector('#tab-2').addEventListener('click', () => {
@@ -105,6 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector('.tab-2').style = 'display: table'
         document.querySelector('.tab-2').classList.add('table-active')
         btn.textContent = 'Показать еще'
+        btn.classList.remove('show')
     })
 
     document.querySelector('#tab-3').addEventListener('click', () => {
@@ -114,6 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
             tables[i].style = 'display: none'
             tables[i].classList.remove('table-active')
             btn.textContent = 'Показать еще'
+            btn.classList.remove('show')
         }
 
         document.querySelector('.tab-3').style = 'display: table'
@@ -127,6 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
             tables[i].style = 'display: none'
             tables[i].classList.remove('table-active')
             btn.textContent = 'Показать еще'
+            btn.classList.remove('show')
         }
 
         document.querySelector('.tab-4').style = 'display: table'
@@ -140,6 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
             tables[i].style = 'display: none'
             tables[i].classList.remove('table-active')
             btn.textContent = 'Показать еще'
+            btn.classList.remove('show')
         }
 
         document.querySelector('.tab-5').style = 'display: table'
@@ -156,7 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             table.classList.remove('show')
             btn.classList.remove('show')
-            btn.textContent ='Показать еще'
+            btn.textContent = 'Показать еще'
         }
     })
 })
