@@ -90,8 +90,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         document.querySelector('.tab-1').style = 'display: table'
         document.querySelector('.tab-1').classList.add('table-active')
-        btn.textContent = 'Показать еще'
-        btn.classList.remove('show')
     })
 
     document.querySelector('#tab-2').addEventListener('click', () => {
@@ -100,12 +98,13 @@ document.addEventListener("DOMContentLoaded", () => {
         for (let i = 0; i < tables.length; i++) {
             tables[i].style = 'display: none'
             tables[i].classList.remove('table-active')
+            tables[i].classList.remove('show')
+            btn.textContent = 'Показать еще'
+            btn.classList.remove('show')
         }
 
         document.querySelector('.tab-2').style = 'display: table'
         document.querySelector('.tab-2').classList.add('table-active')
-        btn.textContent = 'Показать еще'
-        btn.classList.remove('show')
     })
 
     document.querySelector('#tab-3').addEventListener('click', () => {
@@ -114,6 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
         for (let i = 0; i < tables.length; i++) {
             tables[i].style = 'display: none'
             tables[i].classList.remove('table-active')
+            tables[i].classList.remove('show')
             btn.textContent = 'Показать еще'
             btn.classList.remove('show')
         }
@@ -128,6 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
         for (let i = 0; i < tables.length; i++) {
             tables[i].style = 'display: none'
             tables[i].classList.remove('table-active')
+            tables[i].classList.remove('show')
             btn.textContent = 'Показать еще'
             btn.classList.remove('show')
         }
@@ -142,6 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
         for (let i = 0; i < tables.length; i++) {
             tables[i].style = 'display: none'
             tables[i].classList.remove('table-active')
+            tables[i].classList.remove('show')
             btn.textContent = 'Показать еще'
             btn.classList.remove('show')
         }
