@@ -1587,6 +1587,12 @@ input {
     border: 1px solid var(--mid-gold);
     background: transparent;
     border-radius: 12px;
+
+    font-size: clamp(16px, 3vw, 22px);
+    line-height: 125%;
+    font-weight: 300;
+    font-family: 'Rubik', sans-serif;
+    color: var(--white);
 }
 
 input::placeholder {
@@ -1808,11 +1814,13 @@ form .btn {
 }
 
 .assets__name {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 5px;
     justify-content: center;
     padding: 12px;
+    padding-top: 27px;
     color: var(--black);
     font-family: 'Rubik', sans-serif;
     font-size: 20px;
@@ -1821,8 +1829,30 @@ form .btn {
     cursor: pointer;
 }
 
+.assets__name--active {
+    background: linear-gradient(90deg, #DE8737 0%, #FFCF25 50%, #DE8737 100%);
+
+}
+
+.assets__name:first-child {
+    border-top-left-radius: 25px;
+}
+
+.assets__name:last-child {
+    border-top-right-radius: 25px;
+}
+
 .assets__name:not(:last-child) {
-    border-right: 1px solid var(--white)
+    margin-right: 1px;
+}
+
+.assets__name:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -1px;
+    width: 1px;
+    height: 50px;
+    background: var(--white)
 }
 
 .assets__header {
@@ -1831,7 +1861,7 @@ form .btn {
     grid-template-columns: repeat(5, 1fr);
     text-align: center;
     gap: 1px;
-    margin-top: 15px;
+    /* margin-top: 15px; */
     margin-bottom: 5px;
 }
 
@@ -2633,6 +2663,14 @@ button.btn {
         display: block;
     }
 
+    .hero {
+        padding-top: 150px;
+    }
+
+    main {
+        gap: 150px;
+    }
+
     .analitics__content {
         flex-wrap: wrap;
     }
@@ -2646,6 +2684,30 @@ button.btn {
 
     .analitics__banner p {
         text-align: center;
+    }
+
+    .global__content {
+        gap: 20px;
+        justify-content: space-between;
+    }
+
+    .btn {
+        width: 100%;
+        display: block;
+        padding: 22px;
+    }
+
+    .global p {
+        max-width: 250px;
+        color: var(--grey-text);
+    }
+
+    h1, .h1 {
+        color: var(--white);
+    }
+
+    h2, .h2 {
+        color: var(--white);
     }
 
 

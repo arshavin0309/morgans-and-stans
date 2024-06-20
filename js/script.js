@@ -89,11 +89,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // табы и кнопка "показать еще"
     let btn = document.querySelector('.assets__btn')
-
     let tab1 = document.querySelector('#tab-1')
+    let tabs = document.querySelectorAll('.assets__name')
 
     if (tab1 !== null) {
         tab1.addEventListener('click', () => {
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('assets__name--active')
+            }
+
+            tab1.classList.add('assets__name--active')
             let tables = document.querySelectorAll('.assets__box .assets__table')
 
             for (let i = 0; i < tables.length; i++) {
@@ -113,6 +118,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (tab2 !== null) {
         tab2.addEventListener('click', () => {
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('assets__name--active')
+            }
+
+            tab2.classList.add('assets__name--active')
             let tables = document.querySelectorAll('.assets__box .assets__table')
 
             for (let i = 0; i < tables.length; i++) {
@@ -132,6 +142,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (tab3 !== null) {
         tab3.addEventListener('click', () => {
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('assets__name--active')
+            }
+            
+            tab3.classList.add('assets__name--active')
             let tables = document.querySelectorAll('.assets__box .assets__table')
 
             for (let i = 0; i < tables.length; i++) {
@@ -151,6 +166,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (tab4 !== null) {
         tab4.addEventListener('click', () => {
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('assets__name--active')
+            }
+            
+            tab4.classList.add('assets__name--active')
             let tables = document.querySelectorAll('.assets__box .assets__table')
 
             for (let i = 0; i < tables.length; i++) {
@@ -170,6 +190,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (tab5 !== null) {
         tab5.addEventListener('click', () => {
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('assets__name--active')
+            }
+            
+            tab5.classList.add('assets__name--active')
             let tables = document.querySelectorAll('.assets__box .assets__table')
 
             for (let i = 0; i < tables.length; i++) {
