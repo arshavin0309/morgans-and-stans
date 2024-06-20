@@ -77,95 +77,127 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // бургер меню
+    let burgerBtn = document.querySelector('.burger')
+
+    if (burgerBtn !== null) {
+        burgerBtn.addEventListener('click', () => {
+            document.querySelector('.header__nav').classList.toggle('header__nav--show')
+            document.querySelector('.header').classList.toggle('black')
+        })
+    }
+
     // табы и кнопка "показать еще"
     let btn = document.querySelector('.assets__btn')
 
-    document.querySelector('#tab-1').addEventListener('click', () => {
-        let tables = document.querySelectorAll('.assets__box .assets__table')
+    let tab1 = document.querySelector('#tab-1')
 
-        for (let i = 0; i < tables.length; i++) {
-            tables[i].style = 'display: none'
-            tables[i].classList.remove('table-active')
-            tables[i].classList.remove('show')
-            btn.textContent = 'Показать еще'
-            btn.classList.remove('show')
-        }
+    if (tab1 !== null) {
+        tab1.addEventListener('click', () => {
+            let tables = document.querySelectorAll('.assets__box .assets__table')
 
-        document.querySelector('.tab-1').style = 'display: table'
-        document.querySelector('.tab-1').classList.add('table-active')
-    })
+            for (let i = 0; i < tables.length; i++) {
+                tables[i].style = 'display: none'
+                tables[i].classList.remove('table-active')
+                tables[i].classList.remove('show')
+                btn.textContent = 'Показать еще'
+                btn.classList.remove('show')
+            }
 
-    document.querySelector('#tab-2').addEventListener('click', () => {
-        let tables = document.querySelectorAll('.assets__box .assets__table')
+            document.querySelector('.tab-1').style = 'display: table'
+            document.querySelector('.tab-1').classList.add('table-active')
+        })
+    }
 
-        for (let i = 0; i < tables.length; i++) {
-            tables[i].style = 'display: none'
-            tables[i].classList.remove('table-active')
-            tables[i].classList.remove('show')
-            btn.textContent = 'Показать еще'
-            btn.classList.remove('show')
-        }
+    let tab2 = document.querySelector('#tab-2')
 
-        document.querySelector('.tab-2').style = 'display: table'
-        document.querySelector('.tab-2').classList.add('table-active')
-    })
+    if (tab2 !== null) {
+        tab2.addEventListener('click', () => {
+            let tables = document.querySelectorAll('.assets__box .assets__table')
 
-    document.querySelector('#tab-3').addEventListener('click', () => {
-        let tables = document.querySelectorAll('.assets__box .assets__table')
+            for (let i = 0; i < tables.length; i++) {
+                tables[i].style = 'display: none'
+                tables[i].classList.remove('table-active')
+                tables[i].classList.remove('show')
+                btn.textContent = 'Показать еще'
+                btn.classList.remove('show')
+            }
 
-        for (let i = 0; i < tables.length; i++) {
-            tables[i].style = 'display: none'
-            tables[i].classList.remove('table-active')
-            tables[i].classList.remove('show')
-            btn.textContent = 'Показать еще'
-            btn.classList.remove('show')
-        }
+            document.querySelector('.tab-2').style = 'display: table'
+            document.querySelector('.tab-2').classList.add('table-active')
+        })
+    }
 
-        document.querySelector('.tab-3').style = 'display: table'
-        document.querySelector('.tab-3').classList.add('table-active')
-    })
+    let tab3 = document.querySelector('#tab-3')
 
-    document.querySelector('#tab-4').addEventListener('click', () => {
-        let tables = document.querySelectorAll('.assets__box .assets__table')
+    if (tab3 !== null) {
+        tab3.addEventListener('click', () => {
+            let tables = document.querySelectorAll('.assets__box .assets__table')
 
-        for (let i = 0; i < tables.length; i++) {
-            tables[i].style = 'display: none'
-            tables[i].classList.remove('table-active')
-            tables[i].classList.remove('show')
-            btn.textContent = 'Показать еще'
-            btn.classList.remove('show')
-        }
+            for (let i = 0; i < tables.length; i++) {
+                tables[i].style = 'display: none'
+                tables[i].classList.remove('table-active')
+                tables[i].classList.remove('show')
+                btn.textContent = 'Показать еще'
+                btn.classList.remove('show')
+            }
 
-        document.querySelector('.tab-4').style = 'display: table'
-        document.querySelector('.tab-4').classList.add('table-active')
-    })
+            document.querySelector('.tab-3').style = 'display: table'
+            document.querySelector('.tab-3').classList.add('table-active')
+        })
+    }
 
-    document.querySelector('#tab-5').addEventListener('click', () => {
-        let tables = document.querySelectorAll('.assets__box .assets__table')
+    let tab4 = document.querySelector('#tab-4')
 
-        for (let i = 0; i < tables.length; i++) {
-            tables[i].style = 'display: none'
-            tables[i].classList.remove('table-active')
-            tables[i].classList.remove('show')
-            btn.textContent = 'Показать еще'
-            btn.classList.remove('show')
-        }
+    if (tab4 !== null) {
+        tab4.addEventListener('click', () => {
+            let tables = document.querySelectorAll('.assets__box .assets__table')
 
-        document.querySelector('.tab-5').style = 'display: table'
-        document.querySelector('.tab-5').classList.add('table-active')
-    })
+            for (let i = 0; i < tables.length; i++) {
+                tables[i].style = 'display: none'
+                tables[i].classList.remove('table-active')
+                tables[i].classList.remove('show')
+                btn.textContent = 'Показать еще'
+                btn.classList.remove('show')
+            }
 
-    btn.addEventListener('click', () => {
-        let table = document.querySelector('.table-active')
+            document.querySelector('.tab-4').style = 'display: table'
+            document.querySelector('.tab-4').classList.add('table-active')
+        })
+    }
 
-        if (btn.textContent === 'Показать еще') {
-            table.classList.add('show')
-            btn.classList.add('show')
-            btn.textContent = 'Скрыть'
-        } else {
-            table.classList.remove('show')
-            btn.classList.remove('show')
-            btn.textContent = 'Показать еще'
-        }
-    })
+    let tab5 = document.querySelector('#tab-5')
+
+    if (tab5 !== null) {
+        tab5.addEventListener('click', () => {
+            let tables = document.querySelectorAll('.assets__box .assets__table')
+
+            for (let i = 0; i < tables.length; i++) {
+                tables[i].style = 'display: none'
+                tables[i].classList.remove('table-active')
+                tables[i].classList.remove('show')
+                btn.textContent = 'Показать еще'
+                btn.classList.remove('show')
+            }
+
+            document.querySelector('.tab-5').style = 'display: table'
+            document.querySelector('.tab-5').classList.add('table-active')
+        })
+    }
+
+    if (btn !== null) {
+        btn.addEventListener('click', () => {
+            let table = document.querySelector('.table-active')
+
+            if (btn.textContent === 'Показать еще') {
+                table.classList.add('show')
+                btn.classList.add('show')
+                btn.textContent = 'Скрыть'
+            } else {
+                table.classList.remove('show')
+                btn.classList.remove('show')
+                btn.textContent = 'Показать еще'
+            }
+        })
+    }
 })
