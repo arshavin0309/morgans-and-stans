@@ -77,13 +77,27 @@
             <div class="container">
                 <h2>Глобальные Фондовые рынки без комиссий</h2>
                 <p class="text1">Инвестируйте в самые прибыльные компании</p>
-                <div class="global__box">
+
+                <div class="global__box for-desktop">
                     <div><img src="img/tesla.svg" alt=""></div>
                     <div><img src="img/apple.svg" alt=""></div>
                     <div><img src="img/х.svg" alt=""></div>
                     <div><img src="img/spotify.svg" alt=""></div>
                     <div><img src="img/amazon.svg" alt=""></div>
                 </div>
+
+                <div class="swiper for-mobile">
+                    <div class="swiper-wrapper global__box for-mobile">
+                        <div class="swiper-slide"><img src="img/tesla.svg" alt=""></div>
+                        <div class="swiper-slide"><img src="img/apple.svg" alt=""></div>
+                        <div class="swiper-slide"><img src="img/х.svg" alt=""></div>
+                        <div class="swiper-slide"><img src="img/spotify.svg" alt=""></div>
+                        <div class="swiper-slide"><img src="img/amazon.svg" alt=""></div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+
                 <div class="global__content">
                     <div class="global__info">
                         <div class="h2">1€</div>
@@ -99,9 +113,9 @@
         </section>
         <section class="platform">
             <div class="container">
-                <h2>Платформы для торговли инструментами Форекс<br>и CFD</h2>
+                <h2>Платформы для торговли на Форекс и CFD</h2>
                 <p class="text1">Узнать больше и скачать наши торговые платформы для торговли Форекс и CFD</p>
-                <a href="/platform.html" class="btn">Перейти к платформам</a>
+                <a href="/platform.html" class="btn for-desktop">Перейти к платформам</a>
                 <div class="platform__window">
                     <div class="platform__header">
                         <div class="platform__header--left">
@@ -124,13 +138,15 @@
                         <img src="img/platform.png" alt="фото платформы">
                     </div>
                 </div>
+                <a href="/platform.html" class="btn for-mobile">Перейти к платформам</a>
             </div>
         </section>
         <section class="partner">
             <div class="container">
                 <h2 class="text1">Наши услуги</h2>
-                <div class="h2">Morgans & Stans:<br>Ваш надежный<br>финансовый<br>партнЁр</div>
-                <p class="text1">Американская финансовая компания, основанная в 1935 году. Крупнейший брокер в мире и важнейший банк с 2011 года.<br>Главный офис находится в Нью-Йорке.</p>
+                <div class="h2 for-desktop">Morgans & Stans:<br>Ваш надежный<br>финансовый<br>партнЁр</div>
+                <div class="h2 for-mobile">Деятельность Morgans & Stans</div>
+                <p class="text1">Американская финансовая компания, основанная в 1935 году. Крупнейший брокер в мире и важнейший банк с 2011 года. <br class="for-desktop">Главный офис находится в Нью-Йорке.</p>
                 <div class="partner__box">
                     <h3>Управление корпоративными ценными бумагами</h3>
                     <p class="text1">Помогает увеличивать капитал, дает финансовые советы, торгует на бирже и управляет рисками. В 2018 году заработало $20,6 млрд и принесло чистую прибыль $5 млрд</p>
@@ -143,7 +159,8 @@
                     <h3>Инвестиционный менеджмент</h3>
                     <p class="text1">Управляет активами крупных инвесторов и частных лиц через фонды и счета. В 2018 году заработало $2,7 млрд и принесло чистую прибыль $376 млн</p>
                 </div>
-                <a href="" class="btn">Открыть счёт</a>
+                <a href="" class="btn for-desktop">Открыть счёт</a>
+                <a href="" class="btn for-mobile">Начать торговать</a>
                 <div class="coin-1"></div>
                 <div class="coin-2"></div>
             </div>
@@ -179,7 +196,8 @@
         </section>
         <section class="choice">
             <div class="container">
-                <h2>Трейдеры и инвесторы выбирают morgans & stans чтобы</h2>
+                <h2 class="for-desktop">Трейдеры и инвесторы выбирают morgans & stans чтобы</h2>
+                <h2 class="for-mobile">Трейдеры и инвесторы выбирают BTC Group чтобы</h2>
                 <div class="choice__box">
                     <div class="choice__item">
                         <div class="choice__number">01</div>
@@ -209,6 +227,9 @@
             <div class="container">
                 <h2>Качественная<br>аналитика рынка для успешного трейдинга</h2>
                 <p class="text1">Торговые идеи, прогнозы, гипотезы от трейдеров и аналитиков со всего мира</p>
+                <div class="platform__box">
+                    <img src="img/platform-2.png" alt="" class="for-mobile">
+                </div>
                 <div class="analitics__box">
                     <p class="text1">Используйте главный инструмент трейдеров — технический анализ на графике финансового инструмента</p>
                     <a href="/analitics.html" class="btn btn-white">Узнать подробнее</a>
@@ -232,7 +253,9 @@
                         </div>
                     </div>
                     <div class="platform__box">
-                        <script src="https://api.marketcheese.com/widgets/chart/widget.js" data-config='{"terminalBtn":{"color":"#D3D9E3"},"timeframe":"H1","barStyle":"Area","offset":30,"colorScheme":"dark","language":"ru","symbolsEnabled":true,"showTools":true,"terminalBtnVisible":true,"symbol":"EURUSD"}'></script>
+                        <div class="for-desktop">
+                            <script src="https://api.marketcheese.com/widgets/chart/widget.js" data-config='{"terminalBtn":{"color":"#D3D9E3"},"timeframe":"H1","barStyle":"Area","offset":30,"colorScheme":"dark","language":"ru","symbolsEnabled":true,"showTools":true,"terminalBtnVisible":true,"symbol":"EURUSD"}'></script>
+                        </div>
                     </div>
                 </div>
                 <div class="analitics__banner">
@@ -247,7 +270,8 @@
                 </div>
             </div>
         </section>
-    </main><footer>
+    </main>
+    <footer>
         <div class="container">
             <div class="footer__box">
                 <div>

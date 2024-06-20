@@ -26,6 +26,7 @@
     <header class="header">
         <div class="container">
             <a class="header__logo" href="/"><img src="img/logo.svg" alt="логотип"></a>
+            <a class="header__logo--mobile" href="/"><img src="img/logo-mobile.png" alt="логотип мобильный"></a>
             <nav class="header__nav">
                 <div>
                     <a class="text2" href="/">Главная</a>
@@ -61,6 +62,7 @@
                     <a class="btn-border" href="">Открыть счёт</a>
                 </div>
             </nav>
+            <button class="text2 burger">Меню</button>
         </div>
     </header>
     <main class="platform-page">
@@ -125,11 +127,12 @@
         <section class="conditions">
             <div class="container">
                 <h2>Лучшие торговые условия</h2>
-                <p class="text1">Торгуйте на лучших условиях.<br>Спреды от 0 пунктов</p>
-                <div class="conditions__box">
+                <p class="text1">Торгуйте на лучших условиях. <br>Спреды от 0 пунктов</p>
+
+                <div class="conditions__box for-desktop">
                     <div class="conditions__item">
                         <div class="conditions__img">
-                            <img src="img/leverage.svg" alt="">
+                            <img src="img/leverage.png" alt="">
                         </div>
                         <p class="text1">Кредитное плечо от 1:2 до 1:500</p>
                     </div>
@@ -158,6 +161,44 @@
                         <p class="text1">Типичный спред для Форекс — от 0,6 пунктов (EURUSD), торговля микролотами и дробными акциями</p>
                     </div>
                 </div>
+
+                <div class="swiper for-mobile">
+                    <div class="swiper-wrapper conditions__box">
+                        <div class="swiper-slide conditions__item">
+                            <div class="conditions__img">
+                                <img src="img/leverage.png" alt="">
+                            </div>
+                            <p class="text1">Кредитное плечо от 1:2 до 1:500</p>
+                        </div>
+                        <div class="swiper-slide conditions__item">
+                            <div class="conditions__img">
+                                <img src="img/free.svg" alt="">
+                            </div>
+                            <p class="text1">Бесплатный доступ к новостям рынка, аналитике и графикам в реальном времени</p>
+                        </div>
+                        <div class="swiper-slide conditions__item">
+                            <div class="conditions__img">
+                                <img src="img/30.svg" alt="">
+                            </div>
+                            <p class="text1">Более 30 акций</p>
+                        </div>
+                        <div class="swiper-slide conditions__item">
+                            <div class="conditions__img">
+                                <img src="img/65.svg" alt="">
+                            </div>
+                            <p class="text1">Более 65 CFD на валютные пары, энергоносители, металлы, индексы, акции и цифровые валюты</p>
+                        </div>
+                        <div class="swiper-slide conditions__item">
+                            <div class="conditions__img">
+                                <img src="img/0-6.svg" alt="">
+                            </div>
+                            <p class="text1">Типичный спред для Форекс — от 0,6 пунктов (EURUSD), торговля микролотами и дробными акциями</p>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+
                 <a href="" class="btn">Открыть счёт</a>
             </div>
         </section>
@@ -195,7 +236,8 @@
                 <div class="analitics__banner">
                     <div class="analitics__content">
                         <div class="analitics__left">
-                            <div class="banner">Попробуйте профессиональный трейдинг</div>
+                            <div class="banner for-desktop">Попробуйте профессиональный трейдинг</div>
+                            <div class="banner for-mobile">Попробуйте трейдинг</div>
                             <p class="text2">Не знаете, с чего начать? Мы подскажем! Начните практиковаться в торговле с опытными специалистами Morgan&Stans</p>
                             <a href="" class="btn btn-black">Открыть счёт</a>
                         </div>
@@ -204,7 +246,8 @@
                 </div>
             </div>
         </section>
-    </main><footer>
+    </main>
+    <footer>
         <div class="container">
             <div class="footer__box">
                 <div>
