@@ -2869,10 +2869,6 @@ button.btn {
         max-width: 335px;
     }
 
-    .for-desktop {
-        display: none;
-    }
-
     .for-mobile {
         display: block;
     }
@@ -3360,6 +3356,26 @@ button.btn {
         justify-content: space-between;
     }
 
+    .our-contacs .text1 {
+        width: auto;
+    }
+
+    .our-contacs__item address.text1 {
+        text-align: right;
+    }
+
+    .text-right,
+    .our-contacs .text-right {
+        text-align: right;
+    }
+
+    .our-contacs__also {
+        font-size: 14px;
+    }
+
+    .main-contacts .analitics__banner {
+        margin-top: 0;
+    }
 
 
 
@@ -3391,5 +3407,9 @@ button.btn {
     .copyright {
         width: 100%;
         text-align: left;
+    }
+
+    .for-desktop {
+        display: none;
     }
 }
