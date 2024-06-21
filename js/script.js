@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
             for (let i = 0; i < tabs.length; i++) {
                 tabs[i].classList.remove('assets__name--active')
             }
-            
+
             tab3.classList.add('assets__name--active')
             let tables = document.querySelectorAll('.assets__box .assets__table')
 
@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
             for (let i = 0; i < tabs.length; i++) {
                 tabs[i].classList.remove('assets__name--active')
             }
-            
+
             tab4.classList.add('assets__name--active')
             let tables = document.querySelectorAll('.assets__box .assets__table')
 
@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", () => {
             for (let i = 0; i < tabs.length; i++) {
                 tabs[i].classList.remove('assets__name--active')
             }
-            
+
             tab5.classList.add('assets__name--active')
             let tables = document.querySelectorAll('.assets__box .assets__table')
 
@@ -223,6 +223,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 btn.classList.remove('show')
                 btn.textContent = 'Показать еще'
             }
+        })
+    }
+
+    // меню для мобилок
+    let headerItem = document.querySelectorAll('div.header__item')
+
+    for (let i = 0; i < headerItem.length; i++) {
+        headerItem[i].addEventListener('click', () => {
+            headerItem[i].classList.toggle('show')
         })
     }
 })

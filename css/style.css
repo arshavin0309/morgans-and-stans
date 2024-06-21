@@ -114,10 +114,6 @@ main {
     background: var(--black);
 }
 
-.header__nav>div:hover .hover-menu {
-    display: flex;
-}
-
 .hover-menu:hover {
     display: flex;
 }
@@ -2617,7 +2613,11 @@ button.btn {
     display: none;
 }
 
-
+@media (min-width: 1200px) {
+    .header__nav>div:hover .hover-menu {
+        display: flex;
+    }
+}
 
 
 
@@ -2651,26 +2651,53 @@ button.btn {
         top: 80px;
     }
 
-    .header__nav .text2 {
-        display: block;
+    .header__item {
+        width: 100%;
+    }
+    
+    .header__item .text2 {
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+        align-items: center;
         width: 100%;
         padding: 20px;
     }
 
-    .header__nav div.text2 {
-        width: 100%;
+    .header__item div.text2::after {
+        content: '';
+        width: 20px;
+        height: 20px;
+        background: url(../img/arrow-bottom.svg) center / contain no-repeat;
+        background-color: var(--soft-gold);
+        border-radius: 50px;
+        transform: rotate(-90deg);
+        transition: .2s ease-in-out transform;
+    }
+
+    .header__item.show div.text2::after {
+        transform: initial;
+    }
+
+    .header__nav--show .btn-border {
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+
+    .header__item:not(:first-child) {
+        border-top: 1px solid var(--soft-gold);
+    }
+
+    .header__item.show .hover-menu {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        position: initial;
+        padding: 0;
+        border-radius: initial;
+        gap: 0;
     }
 
-    .header__nav div.text2::after {
-        content: '231';
-        display: block;
-    }
-
-    .header__nav>div:not(:nth-child(n+5)) {
-        border-bottom: 1px solid var(--soft-gold);
+    .header__item.show .hover-menu a {
+        padding-left: 40px;
     }
 
     .header .container,
