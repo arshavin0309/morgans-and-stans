@@ -1609,6 +1609,10 @@ input::placeholder {
     justify-items: start;
 }
 
+.our-contacs--right p {
+    color: #7D7D7D;
+}
+
 .contacts {
     margin-top: 45px;
 }
@@ -1807,8 +1811,14 @@ form .btn {
     background: url(../img/types-gradient.svg) center / contain no-repeat;
 }
 
+.assets__container {
+    width: 100%;
+    overflow: auto;
+}
+
 .assets__box {
     width: 100%;
+    min-width: 950px;
     background: conic-gradient(from 180deg at 50% 50%, #DE8737 -10.8deg, #FFCF25 79.2deg, #DE8737 349.2deg, #FFCF25 439.2deg);
     border-radius: 25px;
 }
@@ -2613,6 +2623,10 @@ button.btn {
     display: none;
 }
 
+.mch-widget-wsos.mch-widget-news.vertical {
+    max-width: 100% !important;
+}
+
 @media (min-width: 1200px) {
     .header__nav>div:hover .hover-menu {
         display: flex;
@@ -2656,7 +2670,7 @@ button.btn {
     .header__item {
         width: 100%;
     }
-    
+
     .header__item .text2 {
         display: flex;
         gap: 20px;
@@ -3161,19 +3175,190 @@ button.btn {
         margin-top: 0;
     }
 
+    .types__list {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-top: 0;
+    }
 
+    .types__item:nth-child(3) {
+        grid-row: initial;
+    }
 
+    .types .btn {
+        margin-top: 0;
+    }
 
+    .popular h2.charts {
+        margin-top: 120px;
+        margin-bottom: 0;
+    }
 
+    .popular p.charts {
+        margin-left: -5px;
+        margin-right: -5px;
+    }
 
+    .popular .platform__window {
+        margin-bottom: 0;
+    }
 
+    .questions .container {
+        gap: 15px;
+    }
 
+    .questions__details summary {
+        align-items: start;
+        text-align: left;
+    }
 
+    .arrow {
+        flex: 0 0 auto;
+    }
 
+    .what-is-trading p {
+        margin-top: 0;
+    }
 
+    .popular h2 {
+        margin-bottom: 0;
+    }
 
+    .popular .container {
+        gap: 15px;
+    }
 
+    .popular p {
+        margin-bottom: 15px;
+    }
 
+    h2.charts {
+        margin-bottom: 15px;
+    }
+
+    .popular p.charts {
+        margin-top: 0;
+    }
+
+    .shares-and-cdf-main .analitics__banner {
+        margin-top: 0;
+    }
+
+    h2>.for-mobile {
+        display: inline;
+    }
+
+    .cryptocurrencies-main .choice h2 {
+        margin-bottom: 0;
+    }
+
+    .choice .container > p {
+        text-align: center;
+    }
+
+    .choice__item:nth-child(1) .choice__content,
+    .choice__item:nth-child(3) .choice__content,
+    .choice__item:nth-child(4) .choice__content,
+    .choice__item:nth-child(6) .choice__content {
+        align-items: start;
+        text-align: left;
+    }
+
+    .choice__item:nth-child(5) .choice__number {
+        margin-left: auto;
+    }
+
+    .choice__number
+
+    .choice__item:nth-child(2) .choice__content,
+    .choice__item:nth-child(5) .choice__content {
+        align-items: end;
+        text-align: right;
+    }
+
+    .choice__item:nth-child(5) .choice__content p {
+        text-align: right;
+    }
+
+    .choice__box {
+        gap: 60px;
+    }
+
+    .cryptocurrencies-main .online h2 {
+        margin-bottom: 15px;
+    }
+
+    .trading-analytics__list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 140px;
+        margin-top: 130px;
+    }
+
+    .trading-analytics__item {
+        max-width: 100%;
+    }
+
+    .trading-analytics__item h2 {
+        margin-bottom: 15px;
+    }
+
+    h2.condition {
+        margin-top: 120px;
+    }
+
+    .analitics-main .analitics__banner {
+        margin-top: 0;
+    }
+
+    .news-main .analitics__banner {
+        margin-top: 0;
+    }
+
+    .market-forecasts-main .analitics__banner {
+        margin-top: 0;
+    }
+
+    .main-contacts {
+        gap: 150px;
+    }
+
+    .our-contacs h2.text1,
+    .our-contacs .h2 {
+        margin-left: -5px;
+        margin-right: -5px;
+        text-align: center;
+    }
+
+    .our-contacs__box {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 0;
+        gap: 60px;
+    }
+
+    .our-contacs--right {
+        gap: 10px;
+    }
+
+    .our-contacs--right p {
+        font-size: 14px;
+    }
+
+    .our-contacs--right p a {
+        color: #7D7D7D;
+        text-decoration: none;
+    }
+
+    .our-contacs__left {
+        gap: 15px;
+    }
+
+    .our-contacs__item {
+        display: flex;
+        justify-content: space-between;
+    }
 
 
 
