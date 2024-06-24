@@ -23,10 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
             el: '.swiper-pagination',
         },
 
-        // autoplay: {
-        //     delay: 1500,
-        //     disableOnInteraction: false,
-        // },
+        autoplay: {
+            delay: 1500,
+            disableOnInteraction: false,
+        },
 
         // Navigation arrows
         navigation: {

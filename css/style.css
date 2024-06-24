@@ -31,6 +31,7 @@ body {
     background: var(--black);
     font-family: 'Unbounded', sans-serif;
     overflow-x: hidden;
+    touch-action: pan-x pan-y;
 }
 
 .container {
@@ -112,10 +113,6 @@ main {
 
 .fixed .hover-menu {
     background: var(--black);
-}
-
-.hover-menu:hover {
-    display: flex;
 }
 
 a {
@@ -852,7 +849,9 @@ h3,
 .analitics__right {
     width: 315px;
     height: 400px;
-    background: url(../img/phone.png) center / 100% no-repeat;
+    /* background: url(../img/phone.png) center / 100% no-repeat; */
+    background: url(../img/phone.png) bottom center / 100% no-repeat;
+    transform: translateY(1px);
 }
 
 footer .container {
@@ -1502,9 +1501,10 @@ footer .container {
     height: 290px;
     background: url(../img/awards-decoration.png) center / contain no-repeat;
     color: var(--white);
-    padding: 70px;
+    /* padding: 70px; */
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .awards__item p {
@@ -2118,6 +2118,10 @@ h1.text2 {
     cursor: pointer;
 }
 
+.questions__details summary::-webkit-details-marker {
+    display: none;
+}
+
 .arrow {
     width: 50px;
     height: 50px;
@@ -2633,6 +2637,214 @@ button.btn {
 @media (min-width: 1200px) {
     .header__nav>div:hover .hover-menu {
         display: flex;
+    }
+
+    .hover-menu:hover {
+        display: flex;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    /* отключил все декорации и градиенты */
+    .hero::after {
+        display: none;
+    }
+
+    .platform .container::before {
+        display: none;
+    }
+
+    .platform .container::after {
+        display: none;
+    }
+
+    .partner .container::before {
+        display: none;
+    }
+
+    .partner .container::after {
+        display: none;
+    }
+
+    .coin-1 {
+        display: none;
+    }
+
+    .coin-2 {
+        display: none;
+    }
+
+    .start .container::before {
+        display: none;
+    }
+
+    .start .container::after {
+        display: none;
+    }
+
+    .choice__item:nth-child(1) .choice__number::after {
+        display: none;
+    }
+
+    .choice__item:nth-child(3) .choice__number::after {
+        display: none;
+    }
+
+    .analitics .container::before {
+        display: none;
+    }
+
+    .analitics .container::after {
+        display: none;
+    }
+
+    .trader .container::before {
+        display: none;
+    }
+
+    .trader .container::after {
+        display: none;
+    }
+
+    .trader__item--mobile::before {
+        display: none;
+    }
+
+    .trader__item--mobile::after {
+        display: none;
+    }
+
+    .conditions .container::before {
+        display: none;
+    }
+
+    .about-us .container::before {
+        display: none;
+    }
+
+    .about-us .container::after {
+        display: none;
+    }
+
+    .activity .container::before {
+        display: none;
+    }
+
+    .activity .container::after {
+        display: none;
+    }
+
+    .in-numbers .container::before {
+        display: none;
+    }
+
+    .in-numbers .container::after {
+        display: none;
+    }
+
+    .error .container::before {
+        display: none;
+    }
+
+    .contacts .container::before {
+        display: none;
+    }
+
+    .contacts .container::after {
+        display: none;
+    }
+
+    .our-contacs--right::before {
+        display: none;
+    }
+
+    .trading-conditions .container::before {
+        display: none;
+    }
+
+    .types .container::before {
+        display: none;
+    }
+
+    .types .container::after {
+        display: none;
+    }
+
+    .assets .container::before {
+        display: none;
+    }
+
+    .trade .container::before {
+        display: none;
+    }
+
+    .popular .container::before {
+        display: none;
+    }
+
+    .popular .container::after {
+        display: none;
+    }
+
+    .questions .container::before {
+        display: none;
+    }
+
+    .stocks .container::before {
+        display: none;
+    }
+
+    .what-is-trading .container::before {
+        display: none;
+    }
+
+    .what-is-trading .container::after {
+        display: none;
+    }
+
+    .shares-and-cdf-main .popular .container::before {
+        display: none;
+    }
+
+    .forecasts .container::before {
+        display: none;
+    }
+
+    .forecasts .container::after {
+        display: none;
+    }
+
+    .trading-analytics .container::before {
+        display: none;
+    }
+
+    .calendar .container::before {
+        display: none;
+    }
+
+    .calendar .container::after {
+        display: none;
+    }
+
+    .cryptocurrencies .container::before {
+        display: none;
+    }
+
+    .cryptocurrencies-main .what-is-trading .container::before {
+        display: none;
+    }
+
+    .cryptocurrencies-main .choice__box::before {
+        display: none;
+    }
+
+    .trader__item--desktop:before {
+        display: none;
+    }
+
+    .trader__item--desktop:after {
+        display: none;
     }
 }
 
@@ -3179,8 +3391,9 @@ button.btn {
     }
 
     .awards__item .h3 {
-        width: initial;
+        width: 210px;
         height: 210px;
+        margin: auto;
     }
 
     .awards__box {
@@ -3257,8 +3470,11 @@ button.btn {
         margin-top: 0;
     }
 
-    h2>.for-mobile,
-    .banner>.for-mobile {
+    h2>.for-mobile {
+        display: inline;
+    }
+
+    .banner span.for-mobile {
         display: inline;
     }
 
@@ -3472,6 +3688,7 @@ button.btn {
     }
 
     .swiper-slide .text2 {
+        margin: auto;
         font-size: clamp(14px, 3vw, 16px);
     }
 
@@ -3537,17 +3754,9 @@ button.btn {
         margin-bottom: 30px;
     }
 
-
-
-
-
-
-
-
-
-
-
-
+    .foreign-exchange-market-main .swiper {
+        margin-top: 135px;
+    }
 
     footer .container {
         padding-top: 150px;
@@ -3565,5 +3774,11 @@ button.btn {
 
     .for-desktop {
         display: none;
+    }
+}
+
+@media (max-width: 360px) {
+    .start__box h3 {
+        font-size: clamp(17px, 3vw, 20px);
     }
 }
