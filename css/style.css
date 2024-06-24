@@ -3445,7 +3445,8 @@ button.btn {
         color: var(--white);
     }
 
-    h1.text2 {
+    h1.text2,
+    h2.text1 {
         font-size: clamp(14px, 3vw, 16px);
     }
 
@@ -3523,6 +3524,20 @@ button.btn {
     .what-is-trading__box p:not(:last-child) {
         margin-bottom: 20px;
     }
+
+    .choice__item h3 {
+        color: var(--white);
+    }
+
+    .analitics-main .analitics__left {
+        margin-bottom: 50px;
+    }
+
+    .news-main .analitics__left {
+        margin-bottom: 30px;
+    }
+
+
 
 
 
