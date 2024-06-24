@@ -187,6 +187,7 @@ h3,
     font-weight: 300;
     text-decoration: none;
     font-family: 'Rubik', sans-serif;
+    letter-spacing: -0.03em;
 }
 
 .btn-border {
@@ -1032,6 +1033,8 @@ footer .container {
 }
 
 .trader__box p {
+    /* margin-left: -5px;
+    margin-right: -5px; */
     text-align: left;
 }
 
@@ -2735,7 +2738,8 @@ button.btn {
     }
 
     .start__box {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
     }
 
     .start__img {
@@ -2813,6 +2817,7 @@ button.btn {
     }
 
     .global__content {
+        width: 100%;
         gap: 20px;
         justify-content: space-between;
     }
@@ -2975,9 +2980,13 @@ button.btn {
     }
 
     .analitics__right {
-        width: 315px;
-        height: 400px;
-        background: url(../img/phone.png) right bottom / contain no-repeat;
+        position: relative;
+        height: 390px;
+        left: 75px;
+        top: 20px;
+        transform: rotate(3deg);
+        background-position: top left;
+        background-size: 300px;
     }
 
     .analitics__left .btn {
@@ -2985,7 +2994,10 @@ button.btn {
     }
 
     .analitics__content {
-        padding-top: 165px;
+        padding: 165px 20px 0;
+        gap: 0;
+        background-image: url(../img/banner-mobile.png);
+        overflow: hidden;
     }
 
     .error__box {
@@ -3015,8 +3027,8 @@ button.btn {
     }
 
     .trader__item h2 {
-        margin-left: -10px;
-        margin-right: -10px;
+        /* margin-left: -10px;
+        margin-right: -10px; */
     }
 
     .trader__box {
@@ -3083,6 +3095,10 @@ button.btn {
         padding-top: 60px;
     }
 
+    .about-us h2 {
+        max-width: 230px;
+    }
+
     .partner__box h3 {
         text-align: left;
     }
@@ -3092,8 +3108,8 @@ button.btn {
     }
 
     .protection h2 {
-        margin-left: -13px;
-        margin-right: -13px;
+        /* margin-left: -13px;
+        margin-right: -13px; */
         text-align: left;
     }
 
@@ -3136,7 +3152,7 @@ button.btn {
     }
 
     .in-numbers p {
-        max-width: 270px;
+        max-width: 250px;
         color: var(--grey-text);
     }
 
@@ -3149,8 +3165,8 @@ button.btn {
     }
 
     .awards h2 {
-        margin-left: -5px;
-        margin-right: -5px;
+        /* margin-left: -5px;
+        margin-right: -5px; */
     }
 
     .awards p {
@@ -3164,7 +3180,7 @@ button.btn {
 
     .awards__item .h3 {
         width: initial;
-        height: initial;
+        height: 210px;
     }
 
     .awards__box {
@@ -3191,8 +3207,8 @@ button.btn {
     }
 
     .popular p.charts {
-        margin-left: -5px;
-        margin-right: -5px;
+        /* margin-left: -5px;
+        margin-right: -5px; */
     }
 
     .popular .platform__window {
@@ -3206,6 +3222,7 @@ button.btn {
     .questions__details summary {
         align-items: start;
         text-align: left;
+        color: var(--white);
     }
 
     .arrow {
@@ -3240,7 +3257,8 @@ button.btn {
         margin-top: 0;
     }
 
-    h2>.for-mobile {
+    h2>.for-mobile,
+    .banner>.for-mobile {
         display: inline;
     }
 
@@ -3248,7 +3266,7 @@ button.btn {
         margin-bottom: 0;
     }
 
-    .choice .container > p {
+    .choice .container>p {
         text-align: center;
     }
 
@@ -3264,9 +3282,7 @@ button.btn {
         margin-left: auto;
     }
 
-    .choice__number
-
-    .choice__item:nth-child(2) .choice__content,
+    .choice__number .choice__item:nth-child(2) .choice__content,
     .choice__item:nth-child(5) .choice__content {
         align-items: end;
         text-align: right;
@@ -3322,8 +3338,8 @@ button.btn {
 
     .our-contacs h2.text1,
     .our-contacs .h2 {
-        margin-left: -5px;
-        margin-right: -5px;
+        /* margin-left: -5px;
+        margin-right: -5px; */
         text-align: center;
     }
 
@@ -3377,13 +3393,136 @@ button.btn {
         margin-top: 0;
     }
 
+    .platform h2 {
+        /* margin-left: -5px;
+        margin-right: -5px; */
+    }
 
+    .choice__item:nth-child(1) h3,
+    .choice__item:nth-child(3) h3 {
+        text-align: left;
+    }
 
+    .choice__item:nth-child(2) h3 {
+        text-align: right;
+    }
 
+    .analitics p.for-mobile {
+        max-width: 320px;
+    }
 
+    .analitics__banner p {
+        max-width: initial;
+        /* margin-left: -6px;
+        margin-right: -6px; */
+        color: var(--black);
+    }
 
+    .trader__item--desktop .trader__img::before {
+        content: '';
+        position: absolute;
+        width: calc(100% - 55px - 10px);
+        height: 150px;
+        right: 10px;
+        left: 55px;
+        bottom: 15px;
+        background: url(../img/notebook.png) center bottom / contain no-repeat;
+    }
 
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-size: 25px;
+        font-weight: bold;
+    }
 
+    .text2-mobile {
+        font-family: 'Rubik', sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 130%;
+        letter-spacing: -0.03em;
+        text-align: center;
+        color: var(--white);
+    }
+
+    h1.text2 {
+        font-size: clamp(14px, 3vw, 16px);
+    }
+
+    .swiper-slide .text2-mobile {
+        max-width: 265px;
+    }
+
+    .start__box h3 {
+        color: var(--white);
+    }
+
+    .start__box p {
+        color: var(--white);
+    }
+
+    .protection h2 {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    .protection__list--right {
+        margin-top: 0;
+    }
+
+    .swiper-slide .text2 {
+        font-size: clamp(14px, 3vw, 16px);
+    }
+
+    .awards__buttons {
+        display: block;
+    }
+
+    .about-company-page .analitics__left {
+        margin-bottom: 0;
+    }
+
+    .platform-page .analitics__left {
+        margin-bottom: 0;
+    }
+
+    .activity .container>p {
+        margin-bottom: 15px;
+    }
+
+    .activity .partner__box,
+    .partner__box {
+        gap: 15px;
+    }
+
+    .activity .partner__box p,
+    .partner__box p {
+        margin: 0;
+    }
+
+    .activity .btn {
+        margin-top: 15px;
+    }
+
+    .protection h3 {
+        color: var(--white);
+    }
+
+    .protection p {
+        color: var(--white);
+    }
+
+    .popular .container>p {
+        max-width: 325px;
+    }
+
+    .what-is-trading__box {
+        padding-right: 30px;
+    }
+
+    .what-is-trading__box p:not(:last-child) {
+        margin-bottom: 20px;
+    }
 
 
 
