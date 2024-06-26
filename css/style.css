@@ -2688,7 +2688,17 @@ path {
     background-color: var(--dark-gold);
 }
 
-
+.trading-conditions-main .analitics__right,
+.foreign-exchange-market-main .analitics__right,
+.shares-and-cdf-main .analitics__right,
+.market-forecasts-main .analitics__right,
+.news-main .analitics__right,
+.analitics-main .analitics__right,
+.cryptocurrencies-main .analitics__right {
+    position: relative;
+    bottom: 1px;
+    background-image: url(../img/phone-2.png);
+}
 
 
 
