@@ -2716,6 +2716,12 @@ path {
 }
 
 @media (max-width: 1200px) {
+    .image-box {
+        padding: 0;
+        border: none;
+        background: none;
+    }
+
     .language {
         padding: 30px 20px;
     }
@@ -4280,7 +4286,7 @@ path {
         padding: 0;
         border-radius: 5px;
         border: none;
-        outline: 1px solid #5E5E5E80;
+        /* outline: 1px solid #5E5E5E80; */
     }
 
     .platform__box img {
