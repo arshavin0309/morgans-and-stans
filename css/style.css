@@ -249,7 +249,7 @@ h3,
 .hero .container::before {
     position: absolute;
     content: '';
-    z-index: -1;
+    z-index: -2;
     top: -50%;
     left: 0;
     background: url(../img/hero.png);
@@ -848,7 +848,6 @@ h3,
 .analitics__right {
     width: 315px;
     height: 400px;
-    /* background: url(../img/phone.png) center / 100% no-repeat; */
     background: url(../img/phone.png) bottom center / 100% no-repeat;
     transform: translateY(1px);
 }
@@ -1699,7 +1698,7 @@ form .btn {
     border-radius: 25px;
     border: 1px solid #FFFFFF3A;
     background: #FFFFFF1A;
-    backdrop-filter: blur(7px);
+    backdrop-filter: blur(4px);
     font-family: 'Rubik', sans-serif;
 }
 
@@ -2633,6 +2632,11 @@ button.btn {
     max-width: 100% !important;
 }
 
+.gradient-swiper {
+    position: relative;
+    width: 100%;
+}
+
 @media (min-width: 1200px) {
     .header__nav>div:hover .hover-menu {
         display: flex;
@@ -2644,31 +2648,83 @@ button.btn {
 }
 
 @media (max-width: 1200px) {
+    .hero .container::before {
+        background: url(../img/hero-mobile.png) center 20% / 85% no-repeat;
+        /* mix-blend-mode: lighten; */
+    }
 
-    /* отключил все декорации и градиенты */
+    .hero::before {
+        z-index: -2;
+        content: '';
+        position: absolute;
+        bottom: -20px;
+        right: 80px;
+        background: var(--dark-gold);
+        filter: blur(90px);
+        width: calc(100% - 80px);
+        height: 75%;
+    }
+
     .hero::after {
-        /* display: none; */
-        top: -85px;
-        bottom: 0;
-        left: 0;
+        position: absolute;
+        z-index: -2;
+        content: '';
+        top: 0;
+        left: 50%;
+        right: auto;
+        bottom: auto;
+        width: 50%;
+        height: 235px;
+        background: var(--mid-gold);
+        filter: blur(100px);
+    }
+
+    section:first-child::before {
+        position: absolute;
+        z-index: -2;
+        content: '';
+        top: 0;
+        left: auto;
         right: 0;
-        background: url(../img/hero-gradient-mobile.png) center bottom / cover no-repeat;
-        filter: none;
+        bottom: auto;
+        width: 60%;
+        height: 235px;
+        background: var(--mid-gold);
+        filter: blur(100px);
+    }
+
+    section:first-child::after {
+        z-index: -2;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 150px;
+        bottom: auto;
+        right: auto;
+        background: var(--dark-gold);
+        filter: blur(110px);
+        width: 90%;
+        height: 360px;
     }
 
     .platform .container::before {
-        /* display: none; */
-        top: -50%;
-        bottom: -50%;
-        left: 0;
+        left: 40%;
         right: 0;
-        width: 100%;
-        height: 200%;
-        background: url(../img/platform-gradient-mobile.svg) center / cover no-repeat;
+        top: 40px;
+        bottom: auto;
+        width: 60%;
+        height: 50%;
+        background: var(--dark-gold);
+        filter: blur(200px);
     }
 
     .platform .container::after {
-        display: none;
+        right: 60%;
+        left: 0;
+        width: 40%;
+        height: 50%;
+        background: var(--dark-gold);
+        filter: blur(200px);
     }
 
     .partner .container::before {
@@ -2676,9 +2732,9 @@ button.btn {
         top: 55px;
         bottom: 0;
         left: 0;
-        right: 80px;
-        width: calc(100% - 80px);
-        height: 300px;
+        right: 20%;
+        width: 80%;
+        height: 30%;
         background: var(--dark-gold, #DE8737);
         filter: blur(100px);
     }
@@ -2696,23 +2752,66 @@ button.btn {
     }
 
     .start .container::before {
-        display: none;
+        top: 0;
+        left: 50%;
+        right: 0;
+        bottom: auto;
+        height: 20%;
+        width: 50%;
+        background: var(--mid-gold);
+        filter: blur(200px);
     }
 
     .start .container::after {
-        display: none;
+        width: 70%;
+        height: 20%;
+        bottom: -40px;
+        top: auto;
+        left: 0;
+        right: 30%;
+        background: var(--dark-gold);
+        filter: blur(180px);
     }
 
-    .choice__item:nth-child(1) .choice__number::after {
-        display: none;
+    .choice__item:nth-child(1) .choice__number::after,
+    .choice__item:nth-child(4) .choice__number::after {
+        z-index: -1;
+        position: absolute;
+        content: '';
+        width: 230px;
+        height: 230px;
+        top: 60px;
+        left: 60px;
+        right: auto;
+        bottom: auto;
+        background: var(--dark-gold);
+        filter: blur(150px);
     }
 
-    .choice__item:nth-child(3) .choice__number::after {
-        display: none;
+    .choice__item:nth-child(3) .choice__number::after,
+    .choice__item:nth-child(6) .choice__number::after {
+        z-index: -1;
+        position: absolute;
+        content: '';
+        width: 230px;
+        height: 230px;
+        top: 60px;
+        left: 60px;
+        right: auto;
+        bottom: auto;
+        background: var(--mid-gold);
+        filter: blur(150px);
     }
 
     .analitics .container::before {
-        display: none;
+        width: 60%;
+        height: 30%;
+        left: 40%;
+        right: 0;
+        top: 0;
+        bottom: auto;
+        background: var(--mid-gold);
+        filter: blur(300px);
     }
 
     .analitics .container::after {
@@ -2720,15 +2819,61 @@ button.btn {
     }
 
     .trader .container::before {
-        display: none;
+        background: var(--mid-gold);
+        width: 40%;
+        height: 20%;
+        left: 60%;
+        right: 0;
+        bottom: auto;
+        filter: blur(100px);
     }
 
     .trader .container::after {
-        display: none;
+        background: var(--dark-gold);
+        width: 80%;
+        height: 350px;
+        left: 0;
+        top: 20px;
+        right: 20%;
+        bottom: auto;
+        filter: blur(100px);
+    }
+
+    .trader__item--desktop::before {
+        content: '';
+        position: absolute;
+        width: 70%;
+        height: 220px;
+        right: 0;
+        top: 30px;
+        left: 30%;
+        bottom: auto;
+        background: var(--dark-gold);
+        filter: blur(100px);
+    }
+
+    .trader__item--desktop::after {
+        content: '';
+        position: absolute;
+        width: 40%;
+        height: 400px;
+        right: 60%;
+        top: auto;
+        left: -20px;
+        bottom: -90px;
+        background: var(--dark-gold);
+        filter: blur(120px);
     }
 
     .trader__item--mobile::before {
-        display: none;
+        width: 70%;
+        height: 250px;
+        top: 30px;
+        right: -20px;
+        left: auto;
+        bottom: auto;
+        background: var(--dark-gold);
+        filter: blur(200px);
     }
 
     .trader__item--mobile::after {
@@ -2739,16 +2884,52 @@ button.btn {
         display: none;
     }
 
+    .protection .container::before {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        height: 220px;
+        width: 80%;
+        left: 20%;
+        right: 0;
+        top: 20px;
+        bottom: auto;
+        background: var(--mid-gold);
+        filter: blur(200px);
+    }
+
     .about-us .container::before {
-        display: none;
+        width: 60%;
+        height: 250px;
+        left: 40%;
+        right: 0;
+        top: -25%;
+        bottom: auto;
+        background: var(--mid-gold);
+        filter: blur(100px);
     }
 
     .about-us .container::after {
-        display: none;
+        width: 90%;
+        height: 300px;
+        right: 10%;
+        left: 0;
+        top: 20px;
+        bottom: auto;
+        background: var(--dark-gold);
+        filter: blur(100px);
     }
 
     .activity .container::before {
-        display: none;
+        /* display: none; */
+        top: 55px;
+        bottom: 0;
+        left: 0;
+        right: 20%;
+        width: 80%;
+        height: 30%;
+        background: var(--dark-gold, #DE8737);
+        filter: blur(100px);
     }
 
     .activity .container::after {
@@ -2756,11 +2937,55 @@ button.btn {
     }
 
     .in-numbers .container::before {
-        display: none;
+        top: -60px;
+        left: 0;
+        right: 10%;
+        width: 90%;
+        height: 300px;
+        background: var(--mid-gold);
+        filter: blur(250px);
     }
 
     .in-numbers .container::after {
-        display: none;
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        background: url(../img/in-numbers-coin.png) -60px -30px / cover no-repeat;
+        /* mix-blend-mode: initial; */
+    }
+
+    section.error::before {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 40%;
+        bottom: auto;
+        width: 60%;
+        height: 40%;
+        background: var(--mid-gold);
+        filter: blur(100px);
+    }
+
+    section.error::after {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        top: 30%;
+        right: 20%;
+        left: 0;
+        bottom: auto;
+        width: 80%;
+        height: 30%;
+        background: var(--dark-gold);
+        filter: blur(150px);
     }
 
     .error .container::before {
@@ -2775,6 +3000,34 @@ button.btn {
         display: none;
     }
 
+    .our-contacs .container::before {
+        position: absolute;
+        z-index: -2;
+        content: '';
+        top: -200px;
+        left: 40%;
+        right: 0;
+        bottom: auto;
+        width: 60%;
+        height: 235px;
+        background: var(--mid-gold);
+        filter: blur(100px);
+    }
+
+    .our-contacs .container::after {
+        z-index: -2;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: auto;
+        right: 10%;
+        background: var(--dark-gold);
+        filter: blur(110px);
+        width: 90%;
+        height: 230px;
+    }
+
     .our-contacs--right::before {
         display: none;
     }
@@ -2784,11 +3037,36 @@ button.btn {
     }
 
     .types .container::before {
-        display: none;
+        width: 80%;
+        height: 500px;
+        top: 30px;
+        right: 0;
+        left: 20%;
+        bottom: auto;
+        background: var(--dark-gold);
+        filter: blur(200px);
     }
 
     .types .container::after {
-        display: none;
+        top: -260px;
+        right: 0;
+        left: 0;
+        bottom: auto;
+        /* mix-blend-mode: initial; */
+        width: 580px;
+        height: 580px;
+        background: url(../img/types-coin.png) 60px top / 100% no-repeat;
+    }
+
+    .trading-conditions-main .analitics__right,
+    .foreign-exchange-market-main .analitics__right,
+    .shares-and-cdf-main .analitics__right,
+    .market-forecasts-main .analitics__right,
+    .news-main .analitics__right,
+    .analitics-main .analitics__right,
+    .cryptocurrencies-main .analitics__right {
+        left: 60px;
+        background-image: url(../img/phone-2.png);
     }
 
     .assets .container::before {
@@ -2800,27 +3078,131 @@ button.btn {
     }
 
     .popular .container::before {
-        display: none;
+        z-index: -2;
+        content: '';
+        position: absolute;
+        top: 60px;
+        bottom: auto;
+        right: 10%;
+        left: 0;
+        background: var(--dark-gold);
+        filter: blur(90px);
+        width: 90%;
+        height: 360px;
     }
 
     .popular .container::after {
         display: none;
+        /* position: absolute;
+        z-index: -2;
+        content: '';
+        top: -70px;
+        left: 40%;
+        right: 0;
+        bottom: auto;
+        width: 60%;
+        height: 400px;
+        background: var(--mid-gold);
+        filter: blur(90px); */
+    }
+
+    .gradient-swiper::before {
+        z-index: -1;
+        position: absolute;
+        content: '';
+        bottom: -70px;
+        top: auto;
+        right: -20px;
+        width: 60%;
+        height: 200px;
+        background: var(--mid-gold);
+        filter: blur(80px);
+    }
+
+    .popular h2.charts::after {
+        z-index: -1;
+        position: absolute;
+        content: '';
+        left: -20px;
+        top: 10px;
+        width: 80%;
+        height: 300px;
+        background: var(--dark-gold);
+        filter: blur(100px);
     }
 
     .questions .container::before {
-        display: none;
+        z-index: -1;
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 10px;
+        width: 80%;
+        height: 300px;
+        background: var(--dark-gold);
+        filter: blur(100px);
     }
 
     .stocks .container::before {
         display: none;
     }
 
-    .what-is-trading .container::before {
-        display: none;
+    .what-is-trading .container::before,
+    .cryptocurrencies-main .what-is-trading .container::before {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: auto;
+        right: 10%;
+        background: var(--dark-gold);
+        filter: blur(110px);
+        width: 80%;
+        height: 250px;
     }
 
     .what-is-trading .container::after {
-        display: none;
+        z-index: -1;
+        content: '';
+        position: absolute;
+        right: 0;
+        left: auto;
+        top: 35%;
+        bottom: auto;
+        background: var(--mid-gold);
+        filter: blur(150px);
+        width: 50%;
+        height: 400px;
+        mix-blend-mode: initial;
+    }
+
+    .what-is-trading .btn {
+        position: relative;
+    }
+
+    .what-is-trading .btn::after {
+        z-index: -1;
+        position: absolute;
+        content: '';
+        left: -20px;
+        bottom: 0px;
+        width: 80%;
+        height: 300px;
+        background: var(--dark-gold);
+        filter: blur(100px);
+    }
+
+    .shares-and-cdf-main .popular h2:first-child::after {
+        z-index: -1;
+        position: absolute;
+        content: '';
+        left: -20px;
+        top: 10px;
+        width: 80%;
+        height: 300px;
+        background: var(--dark-gold);
+        filter: blur(100px);
     }
 
     .shares-and-cdf-main .popular .container::before {
@@ -2851,35 +3233,10 @@ button.btn {
         display: none;
     }
 
-    .cryptocurrencies-main .what-is-trading .container::before {
-        display: none;
-    }
-
     .cryptocurrencies-main .choice__box::before {
         display: none;
     }
-
-    .trader__item--desktop:before {
-        display: none;
-    }
-
-    .trader__item--desktop:after {
-        display: none;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 1200px) {
+    
     .header__nav {
         z-index: 2;
         position: absolute;
@@ -2999,6 +3356,75 @@ button.btn {
     .start__item:hover {
         transform: none;
     }
+
+    .online h2 {
+        position: relative;
+    }
+
+    .online h2::after {
+        z-index: -1;
+        position: absolute;
+        content: '';
+        left: -20px;
+        top: 10px;
+        width: 80%;
+        height: 300px;
+        background: var(--dark-gold);
+        filter: blur(100px);
+    }
+
+    .trading-analytics__item:first-child h2 {
+        position: relative;
+    }
+
+    .trading-analytics__item:first-child h2::after {
+        z-index: -1;
+        position: absolute;
+        content: '';
+        left: -20px;
+        top: 10px;
+        width: 80%;
+        height: 300px;
+        background: var(--dark-gold);
+        filter: blur(100px);
+    }
+
+    h2.condition {
+        position: relative;
+    }
+
+    h2.condition::after {
+        z-index: -1;
+        position: absolute;
+        content: '';
+        left: -20px;
+        top: 10px;
+        width: 80%;
+        height: 300px;
+        background: var(--dark-gold);
+        filter: blur(100px);
+    }
+
+
+    .trading-analytics__list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 140px;
+        margin-top: 130px;
+    }
+
+    .trading-analytics__item {
+        max-width: 100%;
+    }
+
+    .trading-analytics__item h2 {
+        margin-bottom: 15px;
+    }
+
+    .platform__box > * {
+        margin: auto !important;
+    }
 }
 
 
@@ -3080,7 +3506,7 @@ button.btn {
         text-align: center;
     }
 
-    .hero .container::before {
+    /* .hero .container::before {
         position: absolute;
         content: '';
         z-index: -1;
@@ -3092,7 +3518,7 @@ button.btn {
         background-repeat: no-repeat;
         width: 100%;
         height: 150%;
-    }
+    } */
 
     .global__info .text1 {
         color: var(--grey-text);
@@ -3196,16 +3622,6 @@ button.btn {
         display: none;
     }
 
-    .platform__box {
-        padding: 0;
-        border-radius: 5px;
-        border: none;
-    }
-
-    .platform__box img {
-        border-radius: 5px;
-    }
-
     .analitics__box {
         width: 100%;
         flex-direction: column;
@@ -3214,7 +3630,7 @@ button.btn {
     .analitics__right {
         position: relative;
         height: 390px;
-        left: 75px;
+        left: 50px;
         top: 20px;
         transform: rotate(3deg);
         background-position: top left;
@@ -3233,6 +3649,7 @@ button.btn {
     }
 
     .error__box {
+        z-index: 1;
         width: 195px;
         height: 195px;
     }
@@ -3259,12 +3676,17 @@ button.btn {
     }
 
     .trader__item h2 {
-        /* margin-left: -10px;
-        margin-right: -10px; */
+        margin-left: -10px;
+        margin-right: -10px;
     }
 
     .trader__box {
         padding: 30px 10px;
+        background: #412f1f;
+    }
+
+    .trader__item h3 {
+        color: var(--white);
     }
 
     .trader__img {
@@ -3294,6 +3716,7 @@ button.btn {
 
     .trader__box p {
         text-align: center;
+        color: var(--grey-text);
     }
 
     .trader__item--mobile h2 {
@@ -3435,6 +3858,7 @@ button.btn {
     }
 
     .popular h2.charts {
+        position: relative;
         margin-top: 120px;
         margin-bottom: 0;
     }
@@ -3533,22 +3957,6 @@ button.btn {
     }
 
     .cryptocurrencies-main .online h2 {
-        margin-bottom: 15px;
-    }
-
-    .trading-analytics__list {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        gap: 140px;
-        margin-top: 130px;
-    }
-
-    .trading-analytics__item {
-        max-width: 100%;
-    }
-
-    .trading-analytics__item h2 {
         margin-bottom: 15px;
     }
 
@@ -3794,6 +4202,18 @@ button.btn {
 
     .for-desktop {
         display: none;
+    }
+
+
+    .platform__box {
+        padding: 0;
+        border-radius: 5px;
+        border: none;
+        outline: 1px solid #5E5E5E80;
+    }
+
+    .platform__box img {
+        border-radius: 5px;
     }
 }
 
