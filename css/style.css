@@ -4981,9 +4981,20 @@ path {
 
 @media (max-width: 360px) {
 
+    h2,
+    .h2 {
+        font-size: clamp(25px, 5vw, 56px);
+    }
+
     h3,
     .h3,
     .start__box h3 {
         font-size: clamp(17px, 3vw, 20px);
+    }
+
+    .platform__window {
+        width: calc(100% + 40px);
+        margin-left: -20px;
+        margin-right: -20px;
     }
 }
