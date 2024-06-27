@@ -86,16 +86,14 @@ document.addEventListener("DOMContentLoaded", () => {
     let btn = document.querySelector('.assets__btn')
     let tab1 = document.querySelector('#tab-1')
     let tabs = document.querySelectorAll('.assets__name')
-    let tables = document.querySelectorAll('.assets__table')
 
-    for (let i = 0; i < tabs.length; i++) {
-        tabs[i].addEventListener('click', () => {
-
+    if (tab1 !== null) {
+        tab1.addEventListener('click', () => {
             for (let i = 0; i < tabs.length; i++) {
                 tabs[i].classList.remove('assets__name--active')
             }
 
-            tabs[i].classList.add('assets__name--active')
+            tab1.classList.add('assets__name--active')
             let tables = document.querySelectorAll('.assets__box .assets__table')
 
             for (let i = 0; i < tables.length; i++) {
@@ -106,8 +104,104 @@ document.addEventListener("DOMContentLoaded", () => {
                 btn.classList.remove('show')
             }
 
-            tables[i].style = 'display: table'
-            tables[i].classList.add('table-active')
+            document.querySelector('.tab-1').style = 'display: table'
+            document.querySelector('.tab-1').classList.add('table-active')
+        })
+    }
+
+    let tab2 = document.querySelector('#tab-2')
+
+    if (tab2 !== null) {
+        tab2.addEventListener('click', () => {
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('assets__name--active')
+            }
+
+            tab2.classList.add('assets__name--active')
+            let tables = document.querySelectorAll('.assets__box .assets__table')
+
+            for (let i = 0; i < tables.length; i++) {
+                tables[i].style = 'display: none'
+                tables[i].classList.remove('table-active')
+                tables[i].classList.remove('show')
+                btn.textContent = 'Показать еще'
+                btn.classList.remove('show')
+            }
+
+            document.querySelector('.tab-2').style = 'display: table'
+            document.querySelector('.tab-2').classList.add('table-active')
+        })
+    }
+
+    let tab3 = document.querySelector('#tab-3')
+
+    if (tab3 !== null) {
+        tab3.addEventListener('click', () => {
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('assets__name--active')
+            }
+
+            tab3.classList.add('assets__name--active')
+            let tables = document.querySelectorAll('.assets__box .assets__table')
+
+            for (let i = 0; i < tables.length; i++) {
+                tables[i].style = 'display: none'
+                tables[i].classList.remove('table-active')
+                tables[i].classList.remove('show')
+                btn.textContent = 'Показать еще'
+                btn.classList.remove('show')
+            }
+
+            document.querySelector('.tab-3').style = 'display: table'
+            document.querySelector('.tab-3').classList.add('table-active')
+        })
+    }
+
+    let tab4 = document.querySelector('#tab-4')
+
+    if (tab4 !== null) {
+        tab4.addEventListener('click', () => {
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('assets__name--active')
+            }
+
+            tab4.classList.add('assets__name--active')
+            let tables = document.querySelectorAll('.assets__box .assets__table')
+
+            for (let i = 0; i < tables.length; i++) {
+                tables[i].style = 'display: none'
+                tables[i].classList.remove('table-active')
+                tables[i].classList.remove('show')
+                btn.textContent = 'Показать еще'
+                btn.classList.remove('show')
+            }
+
+            document.querySelector('.tab-4').style = 'display: table'
+            document.querySelector('.tab-4').classList.add('table-active')
+        })
+    }
+
+    let tab5 = document.querySelector('#tab-5')
+
+    if (tab5 !== null) {
+        tab5.addEventListener('click', () => {
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('assets__name--active')
+            }
+
+            tab5.classList.add('assets__name--active')
+            let tables = document.querySelectorAll('.assets__box .assets__table')
+
+            for (let i = 0; i < tables.length; i++) {
+                tables[i].style = 'display: none'
+                tables[i].classList.remove('table-active')
+                tables[i].classList.remove('show')
+                btn.textContent = 'Показать еще'
+                btn.classList.remove('show')
+            }
+
+            document.querySelector('.tab-5').style = 'display: table'
+            document.querySelector('.tab-5').classList.add('table-active')
         })
     }
 
@@ -151,20 +245,20 @@ document.addEventListener("DOMContentLoaded", () => {
         )
         return matches ? decodeURIComponent(matches[1]) : undefined
     }
-
+    
     function setCookie(name, value, options = {}) {
         options = {
             path: '/',
             ...options,
         }
-
+    
         if (options.expires instanceof Date) {
             options.expires = options.expires.toUTCString()
         }
-
+    
         let updatedCookie =
             encodeURIComponent(name) + '=' + encodeURIComponent(value)
-
+    
         for (let optionKey in options) {
             updatedCookie += '; ' + optionKey
             let optionValue = options[optionKey]
@@ -172,11 +266,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 updatedCookie += '=' + optionValue
             }
         }
-
+    
         document.cookie = updatedCookie
     }
-
-
+    
+    
     if (!getCookie('cookies')) {
         document.querySelector('.cookies').style = 'display: flex'
     }
