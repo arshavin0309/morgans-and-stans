@@ -106,7 +106,7 @@ main {
     padding: 20px 24px;
     border-radius: 10px;
     background: #1a1917;
-    background: #3c3a35;
+    /* background: #3c3a35; */
     list-style: none;
     white-space: nowrap;
 }
@@ -2767,6 +2767,10 @@ path {
 }
 
 @media (max-width: 1200px) {
+    .hover-menu {
+        background: #3c3a35;
+    }
+
     .types__list {
         grid-template-columns: 1fr 1fr;
     }
