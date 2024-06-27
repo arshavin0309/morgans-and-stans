@@ -3164,7 +3164,7 @@ path {
         font-size: clamp(16px, 3vw, 19px);
     }
 
-    .hover-menu {
+    .header__item.show .hover-menu {
         background: #3c3a35;
     }
 
@@ -4939,10 +4939,17 @@ path {
         font-size: clamp(16px, 5vw, 48px);
     }
 
+    .platform-page .banner,
+    .about-company-page .banner,
     .main-contacts .banner,
     .news-main .banner,
     .market-forecasts-main .banner {
         font-size: clamp(16px, 7vw, 48px);
+    }
+
+    .trading-conditions-main .banner,
+    .platform-page .banner {
+        font-size: clamp(16px, 8vw, 48px);
     }
 }
 
