@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
 
         autoplay: {
-            delay: 1500,
+            delay: 2500,
             disableOnInteraction: false,
         },
 
@@ -40,18 +40,13 @@ document.addEventListener("DOMContentLoaded", () => {
         },
 
         breakpoints: {
-            // when window width is >= 320px
-            // 320: {
-            //   slidesPerView: 2,
-            //   spaceBetween: 20
-            // },
-            // when window width is >= 480px
-            // 480: {
-            //   slidesPerView: 3,
-            //   spaceBetween: 30
-            // },
-            // when window width is >= 640px
-            992: {
+            600: {
+                slidesPerView: 2
+            },
+            950: {
+                slidesPerView: 3
+            },
+            1200: {
                 slidesPerView: 4
             }
         }
@@ -231,6 +226,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     for (let i = 0; i < headerItem.length; i++) {
         headerItem[i].addEventListener('click', () => {
+            
+            for (let i = 0; i < headerItem.length; i++) {
+                headerItem[i].classList.remove('show')
+            }
+
             headerItem[i].classList.toggle('show')
         })
     }

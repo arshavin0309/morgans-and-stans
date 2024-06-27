@@ -303,13 +303,6 @@ h3,
     transition: .2s ease-in-out background;
 }
 
-.global__box div:hover::before {
-    background: url(../img/Ellipse-rotate.png) center / 100% no-repeat;
-    animation-duration: 3s;
-    animation-name: rotate;
-    animation-iteration-count: infinite;
-}
-
 .global h2 {
     max-width: 750px;
 }
@@ -731,7 +724,6 @@ h3,
 
 .analitics .container {
     position: relative;
-    /* margin: 15px 30px 0; */
     align-items: end;
     text-align: right;
 }
@@ -1031,8 +1023,6 @@ footer .container {
 }
 
 .trader__box p {
-    /* margin-left: -5px;
-    margin-right: -5px; */
     text-align: left;
 }
 
@@ -1120,7 +1110,7 @@ footer .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    align-items: center;
+    align-items: stretch;
 }
 
 .trader__item .btn {
@@ -1203,13 +1193,6 @@ footer .container {
     height: 178px;
     background: url(../img/Ellipse.png) center / 100% no-repeat;
     transition: .2s ease-in-out background;
-}
-
-.conditions__img:hover::before {
-    background: url(../img/Ellipse-rotate.png) center / 100% no-repeat;
-    animation-duration: 3s;
-    animation-name: rotate;
-    animation-iteration-count: infinite;
 }
 
 .conditions .btn {
@@ -1500,10 +1483,10 @@ footer .container {
     height: 290px;
     background: url(../img/awards-decoration.png) center / contain no-repeat;
     color: var(--white);
-    /* padding: 70px; */
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: auto;
 }
 
 .awards__item p {
@@ -1821,6 +1804,7 @@ form .btn {
 .assets__box {
     width: 100%;
     min-width: 950px;
+    margin-bottom: 10px;
     background: conic-gradient(from 180deg at 50% 50%, #DE8737 -10.8deg, #FFCF25 79.2deg, #DE8737 349.2deg, #FFCF25 439.2deg);
     border-radius: 25px;
 }
@@ -1873,7 +1857,6 @@ form .btn {
     grid-template-columns: repeat(5, 1fr);
     text-align: center;
     gap: 1px;
-    /* margin-top: 15px; */
     margin-bottom: 5px;
 }
 
@@ -2115,6 +2098,7 @@ h1.text2 {
     justify-content: space-between;
     list-style: none;
     cursor: pointer;
+    gap: 10px;
 }
 
 .questions__details summary::-webkit-details-marker {
@@ -2122,8 +2106,8 @@ h1.text2 {
 }
 
 .arrow {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background: conic-gradient(from 180deg at 50% 50%, #DE8737 -10.8deg, #FFCF25 79.2deg, #DE8737 349.2deg, #FFCF25 439.2deg);
 }
@@ -2446,10 +2430,6 @@ p.condition {
     max-width: initial;
 }
 
-.choice__item:nth-child(5) {
-    justify-content: end;
-}
-
 .choice__item:nth-child(4) .choice__number::before {
     position: absolute;
     content: '';
@@ -2723,9 +2703,29 @@ path {
     .hover-menu:hover {
         display: flex;
     }
+
+    .global__box div:hover::before {
+        background: url(../img/Ellipse-rotate.png) center / 100% no-repeat;
+        animation-duration: 3s;
+        animation-name: rotate;
+        animation-iteration-count: infinite;
+    }
+
+    .conditions__img:hover::before {
+        background: url(../img/Ellipse-rotate.png) center / 100% no-repeat;
+        animation-duration: 3s;
+        animation-name: rotate;
+        animation-iteration-count: infinite;
+    }
 }
 
 @media (max-width: 1200px) {
+
+    .choice__item:nth-child(2),
+    .choice__item:nth-child(5) {
+        justify-content: start;
+    }
+
     .image-box {
         padding: 0;
         border: none;
@@ -2738,7 +2738,6 @@ path {
 
     .hero .container::before {
         background: url(../img/hero-mobile.png) center 20% / 85% no-repeat;
-        /* mix-blend-mode: lighten; */
     }
 
     .hero::before {
@@ -2816,7 +2815,6 @@ path {
     }
 
     .partner .container::before {
-        /* display: none; */
         top: 55px;
         bottom: 0;
         left: 0;
@@ -3009,7 +3007,6 @@ path {
     }
 
     .activity .container::before {
-        /* display: none; */
         top: 55px;
         bottom: 0;
         left: 0;
@@ -3045,7 +3042,6 @@ path {
         height: 100%;
         content: '';
         background: url(../img/in-numbers-coin.png) -60px -30px / cover no-repeat;
-        /* mix-blend-mode: initial; */
     }
 
     section.error::before {
@@ -3180,17 +3176,6 @@ path {
 
     .popular .container::after {
         display: none;
-        /* position: absolute;
-        z-index: -2;
-        content: '';
-        top: -70px;
-        left: 40%;
-        right: 0;
-        bottom: auto;
-        width: 60%;
-        height: 400px;
-        background: var(--mid-gold);
-        filter: blur(90px); */
     }
 
     .gradient-swiper::before {
@@ -3335,7 +3320,6 @@ path {
         display: flex;
         flex-direction: column;
         align-items: start;
-        /* padding-top: 50px; */
         padding-bottom: 50px;
         transition: .2s ease-in-out top;
         gap: 0;
@@ -3423,9 +3407,7 @@ path {
         margin-right: 10px;
         height: 110px;
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-            radial-gradient(65.42% 65.57% at 52.9% 45.21%, rgba(222, 135, 55, 0.2) 20.5%, rgba(222, 135, 55, 0) 74.5%)
-            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
-        ;
+            radial-gradient(65.42% 65.57% at 52.9% 45.21%, rgba(222, 135, 55, 0.2) 20.5%, rgba(222, 135, 55, 0) 74.5%);
     }
 
     .start__img img {
@@ -3534,6 +3516,23 @@ path {
 
 
 @media (max-width: 768px) {
+
+    .choice__item:nth-child(2),
+    .choice__item:nth-child(5) {
+        justify-content: end;
+    }
+
+    .assets__btn {
+        position: absolute;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .assets__body {
+        padding-bottom: 50px;
+    }
+
     .hero {
         padding-top: 150px;
     }
@@ -3593,20 +3592,6 @@ path {
         text-align: center;
     }
 
-    /* .hero .container::before {
-        position: absolute;
-        content: '';
-        z-index: -1;
-        top: -70%;
-        left: 0;
-        background: url(../img/hero.png);
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 100%;
-        height: 150%;
-    } */
-
     .global__info .text1 {
         color: var(--grey-text);
     }
@@ -3647,12 +3632,14 @@ path {
         gap: 30px;
     }
 
-    .choice__item:nth-child(2) {
+    .choice__item:nth-child(2),
+    .choice__item:nth-child(5) {
         align-items: end;
         text-align: right;
     }
 
-    .choice__item:nth-child(2) .choice__content p {
+    .choice__item:nth-child(2) .choice__content p,
+    .choice__item:nth-child(5) .choice__content p {
         text-align: right;
     }
 
@@ -3666,7 +3653,6 @@ path {
     }
 
     .analitics p {
-        max-width: 245px;
         margin: auto;
         color: var(--grey-text);
         text-align: center;
@@ -3701,8 +3687,12 @@ path {
 
     .swiper-button-next,
     .swiper-button-prev {
-        top: var(--swiper-navigation-top-offset, 40%);
         color: #FFFFFF33;
+    }
+
+    .about-company-page .swiper-button-next,
+    .about-company-page .swiper-button-prev {
+        top: var(--swiper-navigation-top-offset, 42%);
     }
 
     .platform__header {
@@ -3769,6 +3759,7 @@ path {
 
     .trader__box {
         padding: 30px 10px;
+        align-items: center;
         background: #412f1f;
     }
 
@@ -3784,7 +3775,6 @@ path {
     }
 
     .trader__buttons {
-        grid-template-columns: 1fr;
         gap: 15px;
     }
 
@@ -3850,8 +3840,6 @@ path {
     }
 
     .protection h2 {
-        /* margin-left: -13px;
-        margin-right: -13px; */
         text-align: left;
     }
 
@@ -3906,11 +3894,6 @@ path {
         margin-top: 15px;
     }
 
-    .awards h2 {
-        /* margin-left: -5px;
-        margin-right: -5px; */
-    }
-
     .awards p {
         margin-top: 15px;
         color: var(--grey-text);
@@ -3948,11 +3931,6 @@ path {
         position: relative;
         margin-top: 120px;
         margin-bottom: 0;
-    }
-
-    .popular p.charts {
-        /* margin-left: -5px;
-        margin-right: -5px; */
     }
 
     .popular .platform__window {
@@ -4069,8 +4047,6 @@ path {
 
     .our-contacs h2.text1,
     .our-contacs .h2 {
-        /* margin-left: -5px;
-        margin-right: -5px; */
         text-align: center;
     }
 
@@ -4124,11 +4100,6 @@ path {
         margin-top: 0;
     }
 
-    .platform h2 {
-        /* margin-left: -5px;
-        margin-right: -5px; */
-    }
-
     .choice__item:nth-child(1) h3,
     .choice__item:nth-child(3) h3 {
         text-align: left;
@@ -4138,14 +4109,8 @@ path {
         text-align: right;
     }
 
-    .analitics p.for-mobile {
-        max-width: 320px;
-    }
-
     .analitics__banner p {
         max-width: initial;
-        /* margin-left: -6px;
-        margin-right: -6px; */
         color: var(--black);
     }
 
@@ -4166,19 +4131,26 @@ path {
         font-weight: bold;
     }
 
-    .text2-mobile {
-        font-family: 'Rubik', sans-serif;
-        font-size: 16px;
-        font-weight: 300;
-        line-height: 130%;
-        letter-spacing: -0.03em;
-        text-align: center;
-        color: var(--white);
+    .platform p {
+        color: var(--grey-text);
+    }
+
+    .choice__content p {
+        color: var(--grey-text);
+    }
+
+    .partner__box p {
+        color: var(--grey-text);
+    }
+
+    .start__item p {
+        color: var(--grey-text);
     }
 
     h1.text2,
     h2.text1 {
         font-size: clamp(14px, 3vw, 16px);
+        text-transform: none;
     }
 
     .swiper-slide .text2-mobile {
@@ -4186,10 +4158,6 @@ path {
     }
 
     .start__box h3 {
-        color: var(--white);
-    }
-
-    .start__box p {
         color: var(--white);
     }
 
@@ -4296,11 +4264,39 @@ path {
         padding: 0;
         border-radius: 5px;
         border: none;
-        /* outline: 1px solid #5E5E5E80; */
     }
 
     .platform__box img {
         border-radius: 5px;
+    }
+
+    .what-is-trading__box {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 425px) {
+    .analitics p {
+        max-width: 245px;
+    }
+
+    .analitics p.for-mobile {
+        max-width: 320px;
+    }
+
+    .trader__buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .text2-mobile {
+        font-family: 'Rubik', sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 130%;
+        letter-spacing: -0.03em;
+        text-align: center;
+        color: var(--white);
     }
 }
 
