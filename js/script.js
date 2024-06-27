@@ -72,16 +72,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // бургер меню
-    let burgerBtn = document.querySelector('.burger')
-
-    if (burgerBtn !== null) {
-        burgerBtn.addEventListener('click', () => {
-            document.querySelector('.header__nav').classList.toggle('header__nav--show')
-            document.querySelector('.header').classList.toggle('black')
-        })
-    }
-
     // табы и кнопка "показать еще"
     let btn = document.querySelector('.assets__btn')
     let tab1 = document.querySelector('#tab-1')
@@ -127,8 +117,21 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
 
-    // меню для мобилок
+    // бургер меню и меню для мобилок
+    let burgerBtn = document.querySelector('.burger')
     let headerItem = document.querySelectorAll('div.header__item')
+
+    if (burgerBtn !== null) {
+        burgerBtn.addEventListener('click', () => {
+            document.querySelector('.header__nav').classList.toggle('header__nav--show')
+            
+            for (let i = 0; i < headerItem.length; i++) {
+                headerItem[i].classList.remove('show')
+            }
+
+            document.querySelector('.header').classList.toggle('black')
+        })
+    }
 
     for (let i = 0; i < headerItem.length; i++) {
         headerItem[i].addEventListener('click', () => {
