@@ -986,7 +986,7 @@ h3,
 .analitics__right {
     width: 315px;
     height: 400px;
-    background: url(../img/phone.png) bottom center / 100% no-repeat;
+    background: url(../img/phone.png) center left / cover no-repeat;
     -webkit-transform: translateY(1px);
     -ms-transform: translateY(1px);
     transform: translateY(1px);
@@ -4604,7 +4604,8 @@ path {
     }
 
     .banner span.for-mobile {
-        display: inline;
+        /* display: inline; */
+        display: none;
     }
 
     .cryptocurrencies-main .choice h2 {
@@ -4936,6 +4937,10 @@ path {
 }
 
 @media (max-width: 425px) {
+    .banner {
+        font-size: clamp(16px, 7vw, 48px);    
+    }
+
     .analitics p {
         max-width: 245px;
     }
