@@ -133,11 +133,15 @@ document.addEventListener("DOMContentLoaded", () => {
     for (let i = 0; i < headerItem.length; i++) {
         headerItem[i].addEventListener('click', () => {
 
-            for (let i = 0; i < headerItem.length; i++) {
-                headerItem[i].classList.remove('show')
+            if (headerItem[i].classList.contains('show') !== true) {
+                for (let i = 0; i < headerItem.length; i++) {
+                    headerItem[i].classList.remove('show')
+                }
+    
+                headerItem[i].classList.toggle('show')
+            } else {
+                headerItem[i].classList.toggle('show')
             }
-
-            headerItem[i].classList.toggle('show')
         })
     }
 
