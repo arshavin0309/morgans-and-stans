@@ -640,7 +640,8 @@ h3,
     position: relative;
 }
 
-.choice__item:nth-child(2) {
+.choice__item:nth-child(2),
+.choice__item:nth-child(5) {
     justify-content: end;
 }
 
@@ -859,7 +860,6 @@ footer .container {
     align-items: start;
     gap: 120px;
     color: #999;
-    flex-wrap: wrap;
 }
 
 .footer__box p {
@@ -2680,8 +2680,32 @@ path {
     background-image: url(../img/phone-2.png);
 }
 
+.cookies {
+    position: fixed;
+    z-index: 10;
+    bottom: 40px;
+    left: 40px;
+    right: 40px;
+    margin-left: auto;
+    max-width: 450px;
+    display: none;
+    gap: 20px;
+    align-items: start;
+    background: var(--grey-text);
+    padding: 25px;
+    border-radius: 5px;
+    color: var(--black);
+}
 
+.cookies a {
+    color: var(--black);
+}
 
+.cookies .btn {
+    margin-top: 5px;
+    padding: 10px 30px;
+    font-size: 14px;
+}
 
 
 
@@ -2719,7 +2743,37 @@ path {
     }
 }
 
+@media (min-width: 769px) and (max-width: 1300px) {
+    .conditions__item {
+        width: auto;
+    }
+
+    .conditions__item:nth-child(4),
+    .conditions__item:nth-child(5) {
+        width: auto;
+    }
+
+    .conditions__box {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    }
+
+    .conditions__item,
+    .foreign-exchange-market-main .conditions__item {
+        width: 100%;
+    }
+}
+
 @media (max-width: 1200px) {
+    .types__list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer__box {
+        gap: 40px;
+        justify-content: space-between;
+    }
 
     .choice__item:nth-child(2),
     .choice__item:nth-child(5) {
@@ -3496,7 +3550,13 @@ path {
     }
 }
 
-
+@media (max-width: 1000px) {
+    .footer__box {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+        gap: 50px;
+    }
+}
 
 
 
@@ -3516,6 +3576,14 @@ path {
 
 
 @media (max-width: 768px) {
+    .questions__details p,
+    .questions__details li {
+        color: var(--grey-text);
+    }
+
+    .types__item:nth-child(3) li {
+        color: var(--grey-text);
+    }
 
     .choice__item:nth-child(2),
     .choice__item:nth-child(5) {
@@ -3542,7 +3610,8 @@ path {
     }
 
     .analitics__content {
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
     }
 
     .analitics__left {
@@ -3690,9 +3759,13 @@ path {
         color: #FFFFFF33;
     }
 
-    .about-company-page .swiper-button-next,
+    /* .about-company-page .swiper-button-next,
     .about-company-page .swiper-button-prev {
         top: var(--swiper-navigation-top-offset, 42%);
+    } */
+
+    .swiper-button-next, .swiper-button-prev {
+        top: 105px;
     }
 
     .platform__header {
@@ -4027,6 +4100,7 @@ path {
 
     h2.condition {
         margin-top: 120px;
+        margin-bottom: -15px;
     }
 
     .analitics-main .analitics__banner {
@@ -4276,6 +4350,23 @@ path {
     }
 }
 
+@media (max-width: 500px) {
+    .cookies {
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cookies .btn {
+        width: calc(100% + 30px);
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+
 @media (max-width: 425px) {
     .analitics p {
         max-width: 245px;
@@ -4301,6 +4392,9 @@ path {
 }
 
 @media (max-width: 360px) {
+
+    h3,
+    .h3,
     .start__box h3 {
         font-size: clamp(17px, 3vw, 20px);
     }
