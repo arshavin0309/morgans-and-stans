@@ -1256,6 +1256,10 @@ footer .container {
     background: url(../img/desktop-trader-gradient.svg) center / contain no-repeat;
 }
 
+.trader__item--desktop .trader__buttons {
+    grid-template-columns: 1fr;
+}
+
 .trader__item--desktop .trader__img::before {
     content: '';
     position: absolute;
@@ -1327,6 +1331,10 @@ footer .container {
     content: '';
     display: block;
     background: url(../img/windows.svg) center / contain no-repeat;
+}
+
+.btn.btn-for-mac {
+    display: none !important;
 }
 
 .btn--mac::before {
