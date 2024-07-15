@@ -148,6 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
 
+    // окно с предупреждением о куки
     function getCookie(name) {
         let matches = document.cookie.match(
             new RegExp(
